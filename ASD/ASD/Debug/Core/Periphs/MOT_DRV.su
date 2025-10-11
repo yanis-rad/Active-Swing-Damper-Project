@@ -1,2 +1,0 @@
-../Core/Periphs/MOT_DRV.c:13:6:Motor_Drive	16	static
-../Core/Periphs/MOT_DRV.c:20:6:PWM_PinState_Set	24	static

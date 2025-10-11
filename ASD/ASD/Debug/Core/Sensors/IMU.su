@@ -1,3 +1,0 @@
-../Core/Sensors/IMU.c:20:6:MPU6050_Init	32	static
-../Core/Sensors/IMU.c:47:6:IMU_Read	32	static
-../Core/Sensors/IMU.c:55:6:Decel_Check	24	static

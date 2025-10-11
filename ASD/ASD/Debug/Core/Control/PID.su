@@ -1,4 +1,0 @@
-../Core/Control/PID.c:14:6:PID_Init	16	static
-../Core/Control/PID.c:23:6:TgtSpd_Set	32	static
-../Core/Control/PID.c:35:6:PID_Control	32	static
-../Core/Control/PID.c:54:6:PWM_Limiter	16	static

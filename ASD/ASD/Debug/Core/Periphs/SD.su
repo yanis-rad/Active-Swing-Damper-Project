@@ -1,2 +1,0 @@
-../Core/Periphs/SD.c:16:6:SDLog_Startup	8	static
-../Core/Periphs/SD.c:24:6:SDLog_Write	80	static

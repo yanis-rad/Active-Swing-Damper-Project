@@ -1,2 +1,0 @@
-../Core/App/IMU.c:14:6:MPU6050_Init	2
-../Core/App/IMU.c:41:6:IMU_Read	1
