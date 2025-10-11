@@ -1,0 +1,1610 @@
+
+;; Function SystemInit (SystemInit, funcdef_no=134, decl_uid=6570, cgraph_uid=139, symbol_order=141)
+
+void SystemInit ()
+{
+  struct SCB_Type * _1;
+  long unsigned int _2;
+  struct SCB_Type * _3;
+  long unsigned int _4;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = 3758157056B;
+  _2 ={v} _1->CPACR;
+  _3 = 3758157056B;
+  _4 = _2 | 15728640;
+  _3->CPACR ={v} _4;
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (_3 - 3 )
+Partition 4 (_4 - 4 )
+
+
+Coalescible Partition map 
+
+
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (_3 - 3 )
+Partition 3 (_4 - 4 )
+
+void SystemInit ()
+{
+  struct SCB_Type * _1;
+  long unsigned int _2;
+  struct SCB_Type * _3;
+  long unsigned int _4;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = 3758157056B;
+  _2 ={v} _1->CPACR;
+  _3 = 3758157056B;
+  _4 = _2 | 15728640;
+  _3->CPACR ={v} _4;
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; _1 = 3758157056B;
+
+(insn 5 4 0 (set (reg/f:SI 113 [ _1 ])
+        (const_int -536810240 [0xffffffffe000ed00])) "../Core/Src/system_stm32f4xx.c":171:8 -1
+     (nil))
+
+;; _2 ={v} _1->CPACR;
+
+(insn 6 5 0 (set (reg:SI 114 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 113 [ _1 ])
+                (const_int 136 [0x88])) [1 _1->CPACR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":171:8 -1
+     (nil))
+
+;; _3 = 3758157056B;
+
+(insn 7 6 0 (set (reg/f:SI 115 [ _3 ])
+        (const_int -536810240 [0xffffffffe000ed00])) "../Core/Src/system_stm32f4xx.c":171:8 -1
+     (nil))
+
+;; _4 = _2 | 15728640;
+
+(insn 8 7 0 (set (reg:SI 116 [ _4 ])
+        (ior:SI (reg:SI 114 [ _2 ])
+            (const_int 15728640 [0xf00000]))) "../Core/Src/system_stm32f4xx.c":171:16 -1
+     (nil))
+
+;; _3->CPACR ={v} _4;
+
+(insn 9 8 0 (set (mem/v:SI (plus:SI (reg/f:SI 115 [ _3 ])
+                (const_int 136 [0x88])) [1 _3->CPACR+0 S4 A32])
+        (reg:SI 116 [ _4 ])) "../Core/Src/system_stm32f4xx.c":171:16 -1
+     (nil))
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 113 [ _1 ])
+        (const_int -536810240 [0xffffffffe000ed00])) "../Core/Src/system_stm32f4xx.c":171:8 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 114 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 113 [ _1 ])
+                (const_int 136 [0x88])) [1 _1->CPACR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":171:8 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 115 [ _3 ])
+        (const_int -536810240 [0xffffffffe000ed00])) "../Core/Src/system_stm32f4xx.c":171:8 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 116 [ _4 ])
+        (ior:SI (reg:SI 114 [ _2 ])
+            (const_int 15728640 [0xf00000]))) "../Core/Src/system_stm32f4xx.c":171:16 -1
+     (nil))
+(insn 9 8 0 2 (set (mem/v:SI (plus:SI (reg/f:SI 115 [ _3 ])
+                (const_int 136 [0x88])) [1 _3->CPACR+0 S4 A32])
+        (reg:SI 116 [ _4 ])) "../Core/Src/system_stm32f4xx.c":171:16 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU) ../Core/Src/system_stm32f4xx.c:182:1
+
+
+;; Function SystemCoreClockUpdate (SystemCoreClockUpdate, funcdef_no=135, decl_uid=6572, cgraph_uid=140, symbol_order=142)
+
+void SystemCoreClockUpdate ()
+{
+  uint32_t pllm;
+  uint32_t pllsource;
+  uint32_t pllp;
+  uint32_t pllvco;
+  uint32_t tmp;
+  struct RCC_TypeDef * _1;
+  long unsigned int _2;
+  struct RCC_TypeDef * _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  struct RCC_TypeDef * _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  struct RCC_TypeDef * _9;
+  long unsigned int _10;
+  long unsigned int _11;
+  long unsigned int _12;
+  long unsigned int _13;
+  struct RCC_TypeDef * _14;
+  long unsigned int _15;
+  long unsigned int _16;
+  long unsigned int _17;
+  struct RCC_TypeDef * _18;
+  long unsigned int _19;
+  long unsigned int _20;
+  long unsigned int _21;
+  long unsigned int _22;
+  long unsigned int _23;
+  struct RCC_TypeDef * _24;
+  long unsigned int _25;
+  long unsigned int _26;
+  long unsigned int _27;
+  unsigned char _28;
+  long unsigned int SystemCoreClock.0_29;
+  long unsigned int _30;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = 1073887232B;
+  _2 ={v} _1->CFGR;
+  tmp_34 = _2 & 12;
+  if (tmp_34 == 8)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 3>; [INV]
+;;    succ:       3
+;;                8
+
+;;   basic block 3, loop depth 0
+;;    pred:       2
+  if (tmp_34 > 8)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       4
+;;                12
+
+;;   basic block 4, loop depth 0
+;;    pred:       3
+  if (tmp_34 == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 5>; [INV]
+;;    succ:       5
+;;                6
+
+;;   basic block 5, loop depth 0
+;;    pred:       4
+  if (tmp_34 == 4)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 12>; [INV]
+;;    succ:       12
+;;                7
+
+;;   basic block 6, loop depth 0
+;;    pred:       4
+  SystemCoreClock = 16000000;
+  goto <bb 13>; [INV]
+;;    succ:       13
+
+;;   basic block 7, loop depth 0
+;;    pred:       5
+  SystemCoreClock = 25000000;
+  goto <bb 13>; [INV]
+;;    succ:       13
+
+;;   basic block 8, loop depth 0
+;;    pred:       2
+  _3 = 1073887232B;
+  _4 ={v} _3->PLLCFGR;
+  _5 = _4 >> 22;
+  pllsource_35 = _5 & 1;
+  _6 = 1073887232B;
+  _7 ={v} _6->PLLCFGR;
+  pllm_36 = _7 & 63;
+  if (pllsource_35 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+;;    succ:       9
+;;                10
+
+;;   basic block 9, loop depth 0
+;;    pred:       8
+  _8 = 25000000 / pllm_36;
+  _9 = 1073887232B;
+  _10 ={v} _9->PLLCFGR;
+  _11 = _10 >> 6;
+  _12 = _11 & 511;
+  pllvco_38 = _8 * _12;
+  goto <bb 11>; [INV]
+;;    succ:       11
+
+;;   basic block 10, loop depth 0
+;;    pred:       8
+  _13 = 16000000 / pllm_36;
+  _14 = 1073887232B;
+  _15 ={v} _14->PLLCFGR;
+  _16 = _15 >> 6;
+  _17 = _16 & 511;
+  pllvco_37 = _13 * _17;
+;;    succ:       11
+
+;;   basic block 11, loop depth 0
+;;    pred:       9
+;;                10
+  # pllvco_31 = PHI <pllvco_38(9), pllvco_37(10)>
+  _18 = 1073887232B;
+  _19 ={v} _18->PLLCFGR;
+  _20 = _19 >> 16;
+  _21 = _20 & 3;
+  _22 = _21 + 1;
+  pllp_39 = _22 * 2;
+  _23 = pllvco_31 / pllp_39;
+  SystemCoreClock = _23;
+  goto <bb 13>; [INV]
+;;    succ:       13
+
+;;   basic block 12, loop depth 0
+;;    pred:       5
+;;                3
+  SystemCoreClock = 16000000;
+;;    succ:       13
+
+;;   basic block 13, loop depth 0
+;;    pred:       6
+;;                7
+;;                11
+;;                12
+  _24 = 1073887232B;
+  _25 ={v} _24->CFGR;
+  _26 = _25 >> 4;
+  _27 = _26 & 15;
+  _28 = AHBPrescTable[_27];
+  tmp_44 = (uint32_t) _28;
+  SystemCoreClock.0_29 = SystemCoreClock;
+  _30 = SystemCoreClock.0_29 >> tmp_44;
+  SystemCoreClock = _30;
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (_3 - 3 )
+Partition 4 (_4 - 4 )
+Partition 5 (_5 - 5 )
+Partition 6 (_6 - 6 )
+Partition 7 (_7 - 7 )
+Partition 8 (_8 - 8 )
+Partition 9 (_9 - 9 )
+Partition 10 (_10 - 10 )
+Partition 11 (_11 - 11 )
+Partition 12 (_12 - 12 )
+Partition 13 (_13 - 13 )
+Partition 14 (_14 - 14 )
+Partition 15 (_15 - 15 )
+Partition 16 (_16 - 16 )
+Partition 17 (_17 - 17 )
+Partition 18 (_18 - 18 )
+Partition 19 (_19 - 19 )
+Partition 20 (_20 - 20 )
+Partition 21 (_21 - 21 )
+Partition 22 (_22 - 22 )
+Partition 23 (_23 - 23 )
+Partition 24 (_24 - 24 )
+Partition 25 (_25 - 25 )
+Partition 26 (_26 - 26 )
+Partition 27 (_27 - 27 )
+Partition 28 (_28 - 28 )
+Partition 29 (SystemCoreClock.0_29 - 29 )
+Partition 30 (_30 - 30 )
+Partition 31 (pllvco_31 - 31 )
+Partition 34 (tmp_34 - 34 )
+Partition 35 (pllsource_35 - 35 )
+Partition 36 (pllm_36 - 36 )
+Partition 37 (pllvco_37 - 37 )
+Partition 38 (pllvco_38 - 38 )
+Partition 39 (pllp_39 - 39 )
+Partition 44 (tmp_44 - 44 )
+
+
+Coalescible Partition map 
+
+Partition 0, base 0 (pllvco_31 - 31 37 38 )
+Partition 1, base 1 (tmp_34 - 34 44 )
+
+
+Partition map 
+
+Partition 0 (pllvco_31 - 31 )
+Partition 1 (tmp_34 - 34 )
+Partition 2 (pllvco_37 - 37 )
+Partition 3 (pllvco_38 - 38 )
+Partition 4 (tmp_44 - 44 )
+
+
+Conflict graph:
+
+After sorting:
+Sorted Coalesce list:
+(2147483646, 0) pllvco_31 <-> pllvco_38
+(2147483646, 0) pllvco_31 <-> pllvco_37
+(2147483646, 0) tmp_34 <-> tmp_44
+
+Partition map 
+
+Partition 0 (pllvco_31 - 31 )
+Partition 1 (tmp_34 - 34 )
+Partition 2 (pllvco_37 - 37 )
+Partition 3 (pllvco_38 - 38 )
+Partition 4 (tmp_44 - 44 )
+
+Coalesce list: (31)pllvco_31 & (38)pllvco_38 [map: 0, 3] : Success -> 0
+Coalesce list: (31)pllvco_31 & (37)pllvco_37 [map: 0, 2] : Success -> 0
+Coalesce list: (34)tmp_34 & (44)tmp_44 [map: 1, 4] : Success -> 1
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (_3 - 3 )
+Partition 3 (_4 - 4 )
+Partition 4 (_5 - 5 )
+Partition 5 (_6 - 6 )
+Partition 6 (_7 - 7 )
+Partition 7 (_8 - 8 )
+Partition 8 (_9 - 9 )
+Partition 9 (_10 - 10 )
+Partition 10 (_11 - 11 )
+Partition 11 (_12 - 12 )
+Partition 12 (_13 - 13 )
+Partition 13 (_14 - 14 )
+Partition 14 (_15 - 15 )
+Partition 15 (_16 - 16 )
+Partition 16 (_17 - 17 )
+Partition 17 (_18 - 18 )
+Partition 18 (_19 - 19 )
+Partition 19 (_20 - 20 )
+Partition 20 (_21 - 21 )
+Partition 21 (_22 - 22 )
+Partition 22 (_23 - 23 )
+Partition 23 (_24 - 24 )
+Partition 24 (_25 - 25 )
+Partition 25 (_26 - 26 )
+Partition 26 (_27 - 27 )
+Partition 27 (_28 - 28 )
+Partition 28 (SystemCoreClock.0_29 - 29 )
+Partition 29 (_30 - 30 )
+Partition 30 (pllvco_31 - 31 37 38 )
+Partition 31 (tmp_34 - 34 44 )
+Partition 32 (pllsource_35 - 35 )
+Partition 33 (pllm_36 - 36 )
+Partition 34 (pllp_39 - 39 )
+
+void SystemCoreClockUpdate ()
+{
+  uint32_t pllm;
+  uint32_t pllsource;
+  uint32_t pllp;
+  uint32_t pllvco;
+  uint32_t tmp;
+  struct RCC_TypeDef * _1;
+  long unsigned int _2;
+  struct RCC_TypeDef * _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  struct RCC_TypeDef * _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  struct RCC_TypeDef * _9;
+  long unsigned int _10;
+  long unsigned int _11;
+  long unsigned int _12;
+  long unsigned int _13;
+  struct RCC_TypeDef * _14;
+  long unsigned int _15;
+  long unsigned int _16;
+  long unsigned int _17;
+  struct RCC_TypeDef * _18;
+  long unsigned int _19;
+  long unsigned int _20;
+  long unsigned int _21;
+  long unsigned int _22;
+  long unsigned int _23;
+  struct RCC_TypeDef * _24;
+  long unsigned int _25;
+  long unsigned int _26;
+  long unsigned int _27;
+  unsigned char _28;
+  long unsigned int SystemCoreClock.0_29;
+  long unsigned int _30;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = 1073887232B;
+  _2 ={v} _1->CFGR;
+  tmp_34 = _2 & 12;
+  if (tmp_34 == 8)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 3>; [INV]
+;;    succ:       3
+;;                8
+
+;;   basic block 3, loop depth 0
+;;    pred:       2
+  if (tmp_34 > 8)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       4
+;;                12
+
+;;   basic block 4, loop depth 0
+;;    pred:       3
+  if (tmp_34 == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 5>; [INV]
+;;    succ:       5
+;;                6
+
+;;   basic block 5, loop depth 0
+;;    pred:       4
+  if (tmp_34 == 4)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 12>; [INV]
+;;    succ:       12
+;;                7
+
+;;   basic block 6, loop depth 0
+;;    pred:       4
+  SystemCoreClock = 16000000;
+  goto <bb 13>; [INV]
+;;    succ:       13
+
+;;   basic block 7, loop depth 0
+;;    pred:       5
+  SystemCoreClock = 25000000;
+  goto <bb 13>; [INV]
+;;    succ:       13
+
+;;   basic block 8, loop depth 0
+;;    pred:       2
+  _3 = 1073887232B;
+  _4 ={v} _3->PLLCFGR;
+  _5 = _4 >> 22;
+  pllsource_35 = _5 & 1;
+  _6 = 1073887232B;
+  _7 ={v} _6->PLLCFGR;
+  pllm_36 = _7 & 63;
+  if (pllsource_35 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+;;    succ:       9
+;;                10
+
+;;   basic block 9, loop depth 0
+;;    pred:       8
+  _8 = 25000000 / pllm_36;
+  _9 = 1073887232B;
+  _10 ={v} _9->PLLCFGR;
+  _11 = _10 >> 6;
+  _12 = _11 & 511;
+  pllvco_38 = _8 * _12;
+  goto <bb 11>; [INV]
+;;    succ:       11
+
+;;   basic block 10, loop depth 0
+;;    pred:       8
+  _13 = 16000000 / pllm_36;
+  _14 = 1073887232B;
+  _15 ={v} _14->PLLCFGR;
+  _16 = _15 >> 6;
+  _17 = _16 & 511;
+  pllvco_37 = _13 * _17;
+;;    succ:       11
+
+;;   basic block 11, loop depth 0
+;;    pred:       9
+;;                10
+  # pllvco_31 = PHI <pllvco_38(9), pllvco_37(10)>
+  _18 = 1073887232B;
+  _19 ={v} _18->PLLCFGR;
+  _20 = _19 >> 16;
+  _21 = _20 & 3;
+  _22 = _21 + 1;
+  pllp_39 = _22 * 2;
+  _23 = pllvco_31 / pllp_39;
+  SystemCoreClock = _23;
+  goto <bb 13>; [INV]
+;;    succ:       13
+
+;;   basic block 12, loop depth 0
+;;    pred:       5
+;;                3
+  SystemCoreClock = 16000000;
+;;    succ:       13
+
+;;   basic block 13, loop depth 0
+;;    pred:       6
+;;                7
+;;                11
+;;                12
+  _24 = 1073887232B;
+  _25 ={v} _24->CFGR;
+  _26 = _25 >> 4;
+  _27 = _26 & 15;
+  _28 = AHBPrescTable[_27];
+  tmp_44 = (uint32_t) _28;
+  SystemCoreClock.0_29 = SystemCoreClock;
+  _30 = SystemCoreClock.0_29 >> tmp_44;
+  SystemCoreClock = _30;
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; _1 = 1073887232B;
+
+(insn 5 4 0 (set (reg/f:SI 113 [ _1 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":225:12 -1
+     (nil))
+
+;; _2 ={v} _1->CFGR;
+
+(insn 6 5 0 (set (reg:SI 114 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 113 [ _1 ])
+                (const_int 8 [0x8])) [1 _1->CFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":225:12 -1
+     (nil))
+
+;; tmp_34 = _2 & 12;
+
+(insn 7 6 8 (set (reg:SI 143)
+        (and:SI (reg:SI 114 [ _2 ])
+            (const_int 12 [0xc]))) "../Core/Src/system_stm32f4xx.c":225:7 -1
+     (nil))
+
+(insn 8 7 0 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])
+        (reg:SI 143)) "../Core/Src/system_stm32f4xx.c":225:7 -1
+     (nil))
+
+;; if (tmp_34 == 8)
+
+(insn 9 8 10 (set (reg:SI 144)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+(insn 10 9 11 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 144)
+            (const_int 8 [0x8]))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+(jump_insn 11 10 0 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 3
+
+;; if (tmp_34 > 8)
+
+(insn 15 12 16 (set (reg:SI 145)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+(insn 16 15 17 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 145)
+            (const_int 8 [0x8]))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+(jump_insn 17 16 0 (set (pc)
+        (if_then_else (gtu (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 4
+
+;; if (tmp_34 == 0)
+
+(insn 19 18 20 (set (reg:SI 146)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+(insn 20 19 21 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 146)
+            (const_int 0 [0]))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+(jump_insn 21 20 0 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 5
+
+;; if (tmp_34 == 4)
+
+(insn 23 22 24 5 (set (reg:SI 147)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+(insn 24 23 25 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 147)
+            (const_int 4 [0x4]))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+(jump_insn 25 24 28 5 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+(note 28 25 26 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+
+(jump_insn 26 28 27 15 (set (pc)
+        (label_ref 0)) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+
+(barrier 27 26 0)
+
+;; Generating RTL for gimple basic block 6
+
+;; 
+
+(code_label 29 27 30 7 (nil) [0 uses])
+
+(note 30 29 0 NOTE_INSN_BASIC_BLOCK)
+
+;; SystemCoreClock = 16000000;
+
+(insn 31 30 32 (set (reg/f:SI 148)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":230:23 -1
+     (nil))
+
+(insn 32 31 33 (set (reg:SI 149)
+        (const_int 16000000 [0xf42400])) "../Core/Src/system_stm32f4xx.c":230:23 -1
+     (nil))
+
+(insn 33 32 0 (set (mem/c:SI (reg/f:SI 148) [1 SystemCoreClock+0 S4 A32])
+        (reg:SI 149)) "../Core/Src/system_stm32f4xx.c":230:23 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 7
+
+;; 
+
+(code_label 36 35 37 8 (nil) [0 uses])
+
+(note 37 36 0 NOTE_INSN_BASIC_BLOCK)
+
+;; SystemCoreClock = 25000000;
+
+(insn 38 37 39 (set (reg/f:SI 150)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":233:23 -1
+     (nil))
+
+(insn 39 38 40 (set (reg:SI 151)
+        (const_int 25000000 [0x17d7840])) "../Core/Src/system_stm32f4xx.c":233:23 -1
+     (nil))
+
+(insn 40 39 0 (set (mem/c:SI (reg/f:SI 150) [1 SystemCoreClock+0 S4 A32])
+        (reg:SI 151)) "../Core/Src/system_stm32f4xx.c":233:23 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 8
+
+;; 
+
+(code_label 43 42 44 5 (nil) [0 uses])
+
+(note 44 43 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _3 = 1073887232B;
+
+(insn 45 44 0 (set (reg/f:SI 115 [ _3 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":240:23 -1
+     (nil))
+
+;; _4 ={v} _3->PLLCFGR;
+
+(insn 46 45 0 (set (reg:SI 116 [ _4 ])
+        (mem/v:SI (plus:SI (reg/f:SI 115 [ _3 ])
+                (const_int 4 [0x4])) [1 _3->PLLCFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":240:23 -1
+     (nil))
+
+;; _5 = _4 >> 22;
+
+(insn 47 46 0 (set (reg:SI 117 [ _5 ])
+        (lshiftrt:SI (reg:SI 116 [ _4 ])
+            (const_int 22 [0x16]))) "../Core/Src/system_stm32f4xx.c":240:55 -1
+     (nil))
+
+;; pllsource_35 = _5 & 1;
+
+(insn 48 47 49 (set (reg:SI 152)
+        (and:SI (reg:SI 117 [ _5 ])
+            (const_int 1 [0x1]))) "../Core/Src/system_stm32f4xx.c":240:17 -1
+     (nil))
+
+(insn 49 48 0 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 pllsource+0 S4 A32])
+        (reg:SI 152)) "../Core/Src/system_stm32f4xx.c":240:17 -1
+     (nil))
+
+;; _6 = 1073887232B;
+
+(insn 50 49 0 (set (reg/f:SI 118 [ _6 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":241:17 -1
+     (nil))
+
+;; _7 ={v} _6->PLLCFGR;
+
+(insn 51 50 0 (set (reg:SI 119 [ _7 ])
+        (mem/v:SI (plus:SI (reg/f:SI 118 [ _6 ])
+                (const_int 4 [0x4])) [1 _6->PLLCFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":241:17 -1
+     (nil))
+
+;; pllm_36 = _7 & 63;
+
+(insn 52 51 53 (set (reg:SI 153)
+        (and:SI (reg:SI 119 [ _7 ])
+            (const_int 63 [0x3f]))) "../Core/Src/system_stm32f4xx.c":241:12 -1
+     (nil))
+
+(insn 53 52 0 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 pllm+0 S4 A64])
+        (reg:SI 153)) "../Core/Src/system_stm32f4xx.c":241:12 -1
+     (nil))
+
+;; if (pllsource_35 != 0)
+
+(insn 54 53 55 (set (reg:SI 154)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 pllsource+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":243:10 -1
+     (nil))
+
+(insn 55 54 56 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 154)
+            (const_int 0 [0]))) "../Core/Src/system_stm32f4xx.c":243:10 -1
+     (nil))
+
+(jump_insn 56 55 0 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "../Core/Src/system_stm32f4xx.c":243:10 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 9
+
+;; _8 = 25000000 / pllm_36;
+
+(insn 58 57 59 (set (reg:SI 155)
+        (const_int 25000000 [0x17d7840])) "../Core/Src/system_stm32f4xx.c":246:29 -1
+     (nil))
+
+(insn 59 58 60 (set (reg:SI 156)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 pllm+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":246:29 -1
+     (nil))
+
+(insn 60 59 0 (set (reg:SI 120 [ _8 ])
+        (udiv:SI (reg:SI 155)
+            (reg:SI 156))) "../Core/Src/system_stm32f4xx.c":246:29 -1
+     (nil))
+
+;; _9 = 1073887232B;
+
+(insn 61 60 0 (set (reg/f:SI 121 [ _9 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":246:44 -1
+     (nil))
+
+;; _10 ={v} _9->PLLCFGR;
+
+(insn 62 61 0 (set (reg:SI 122 [ _10 ])
+        (mem/v:SI (plus:SI (reg/f:SI 121 [ _9 ])
+                (const_int 4 [0x4])) [1 _9->PLLCFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":246:44 -1
+     (nil))
+
+;; _11 = _10 >> 6;
+
+(insn 63 62 0 (set (reg:SI 123 [ _11 ])
+        (lshiftrt:SI (reg:SI 122 [ _10 ])
+            (const_int 6 [0x6]))) "../Core/Src/system_stm32f4xx.c":246:74 -1
+     (nil))
+
+;; _12 = _11 & 511;
+
+(insn 64 63 0 (set (reg:SI 124 [ _12 ])
+        (zero_extract:SI (reg:SI 123 [ _11 ])
+            (const_int 9 [0x9])
+            (const_int 0 [0]))) "../Core/Src/system_stm32f4xx.c":246:74 -1
+     (nil))
+
+;; pllvco_38 = _8 * _12;
+
+(insn 65 64 66 (set (reg:SI 157)
+        (mult:SI (reg:SI 124 [ _12 ])
+            (reg:SI 120 [ _8 ]))) "../Core/Src/system_stm32f4xx.c":246:16 -1
+     (nil))
+
+(insn 66 65 0 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 pllvco+0 S4 A32])
+        (reg:SI 157)) "../Core/Src/system_stm32f4xx.c":246:16 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 10
+
+;; 
+
+(code_label 69 68 70 10 (nil) [0 uses])
+
+(note 70 69 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _13 = 16000000 / pllm_36;
+
+(insn 71 70 72 (set (reg:SI 158)
+        (const_int 16000000 [0xf42400])) "../Core/Src/system_stm32f4xx.c":251:29 -1
+     (nil))
+
+(insn 72 71 73 (set (reg:SI 159)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 pllm+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":251:29 -1
+     (nil))
+
+(insn 73 72 0 (set (reg:SI 125 [ _13 ])
+        (udiv:SI (reg:SI 158)
+            (reg:SI 159))) "../Core/Src/system_stm32f4xx.c":251:29 -1
+     (nil))
+
+;; _14 = 1073887232B;
+
+(insn 74 73 0 (set (reg/f:SI 126 [ _14 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":251:44 -1
+     (nil))
+
+;; _15 ={v} _14->PLLCFGR;
+
+(insn 75 74 0 (set (reg:SI 127 [ _15 ])
+        (mem/v:SI (plus:SI (reg/f:SI 126 [ _14 ])
+                (const_int 4 [0x4])) [1 _14->PLLCFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":251:44 -1
+     (nil))
+
+;; _16 = _15 >> 6;
+
+(insn 76 75 0 (set (reg:SI 128 [ _16 ])
+        (lshiftrt:SI (reg:SI 127 [ _15 ])
+            (const_int 6 [0x6]))) "../Core/Src/system_stm32f4xx.c":251:74 -1
+     (nil))
+
+;; _17 = _16 & 511;
+
+(insn 77 76 0 (set (reg:SI 129 [ _17 ])
+        (zero_extract:SI (reg:SI 128 [ _16 ])
+            (const_int 9 [0x9])
+            (const_int 0 [0]))) "../Core/Src/system_stm32f4xx.c":251:74 -1
+     (nil))
+
+;; pllvco_37 = _13 * _17;
+
+(insn 78 77 79 (set (reg:SI 160)
+        (mult:SI (reg:SI 129 [ _17 ])
+            (reg:SI 125 [ _13 ]))) "../Core/Src/system_stm32f4xx.c":251:16 -1
+     (nil))
+
+(insn 79 78 0 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 pllvco+0 S4 A32])
+        (reg:SI 160)) "../Core/Src/system_stm32f4xx.c":251:16 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 11
+
+;; 
+
+(code_label 80 79 81 11 (nil) [0 uses])
+
+(note 81 80 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _18 = 1073887232B;
+
+(insn 82 81 0 (set (reg/f:SI 130 [ _18 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":254:20 -1
+     (nil))
+
+;; _19 ={v} _18->PLLCFGR;
+
+(insn 83 82 0 (set (reg:SI 131 [ _19 ])
+        (mem/v:SI (plus:SI (reg/f:SI 130 [ _18 ])
+                (const_int 4 [0x4])) [1 _18->PLLCFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":254:20 -1
+     (nil))
+
+;; _20 = _19 >> 16;
+
+(insn 84 83 0 (set (reg:SI 132 [ _20 ])
+        (lshiftrt:SI (reg:SI 131 [ _19 ])
+            (const_int 16 [0x10]))) "../Core/Src/system_stm32f4xx.c":254:50 -1
+     (nil))
+
+;; _21 = _20 & 3;
+
+(insn 85 84 0 (set (reg:SI 133 [ _21 ])
+        (and:SI (reg:SI 132 [ _20 ])
+            (const_int 3 [0x3]))) "../Core/Src/system_stm32f4xx.c":254:50 -1
+     (nil))
+
+;; _22 = _21 + 1;
+
+(insn 86 85 0 (set (reg:SI 134 [ _22 ])
+        (plus:SI (reg:SI 133 [ _21 ])
+            (const_int 1 [0x1]))) "../Core/Src/system_stm32f4xx.c":254:56 -1
+     (nil))
+
+;; pllp_39 = _22 * 2;
+
+(insn 87 86 88 (set (reg:SI 161)
+        (ashift:SI (reg:SI 134 [ _22 ])
+            (const_int 1 [0x1]))) "../Core/Src/system_stm32f4xx.c":254:12 -1
+     (nil))
+
+(insn 88 87 0 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 pllp+0 S4 A32])
+        (reg:SI 161)) "../Core/Src/system_stm32f4xx.c":254:12 -1
+     (nil))
+
+;; _23 = pllvco_31 / pllp_39;
+
+(insn 89 88 90 (set (reg:SI 162)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 pllvco+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":255:31 -1
+     (nil))
+
+(insn 90 89 91 (set (reg:SI 163)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 pllp+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":255:31 -1
+     (nil))
+
+(insn 91 90 0 (set (reg:SI 135 [ _23 ])
+        (udiv:SI (reg:SI 162)
+            (reg:SI 163))) "../Core/Src/system_stm32f4xx.c":255:31 -1
+     (nil))
+
+;; SystemCoreClock = _23;
+
+(insn 92 91 93 (set (reg/f:SI 164)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":255:23 -1
+     (nil))
+
+(insn 93 92 0 (set (mem/c:SI (reg/f:SI 164) [1 SystemCoreClock+0 S4 A32])
+        (reg:SI 135 [ _23 ])) "../Core/Src/system_stm32f4xx.c":255:23 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 12
+
+;; 
+
+(code_label 96 95 97 6 (nil) [0 uses])
+
+(note 97 96 0 NOTE_INSN_BASIC_BLOCK)
+
+;; SystemCoreClock = 16000000;
+
+(insn 98 97 99 (set (reg/f:SI 165)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":258:23 -1
+     (nil))
+
+(insn 99 98 100 (set (reg:SI 166)
+        (const_int 16000000 [0xf42400])) "../Core/Src/system_stm32f4xx.c":258:23 -1
+     (nil))
+
+(insn 100 99 0 (set (mem/c:SI (reg/f:SI 165) [1 SystemCoreClock+0 S4 A32])
+        (reg:SI 166)) "../Core/Src/system_stm32f4xx.c":258:23 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 13
+
+;; 
+
+(code_label 101 100 102 9 (nil) [0 uses])
+
+(note 102 101 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _24 = 1073887232B;
+
+(insn 103 102 0 (set (reg/f:SI 136 [ _24 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":263:28 -1
+     (nil))
+
+;; _25 ={v} _24->CFGR;
+
+(insn 104 103 0 (set (reg:SI 137 [ _25 ])
+        (mem/v:SI (plus:SI (reg/f:SI 136 [ _24 ])
+                (const_int 8 [0x8])) [1 _24->CFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":263:28 -1
+     (nil))
+
+;; _26 = _25 >> 4;
+
+(insn 105 104 0 (set (reg:SI 138 [ _26 ])
+        (lshiftrt:SI (reg:SI 137 [ _25 ])
+            (const_int 4 [0x4]))) "../Core/Src/system_stm32f4xx.c":263:52 -1
+     (nil))
+
+;; _27 = _26 & 15;
+
+(insn 106 105 0 (set (reg:SI 139 [ _27 ])
+        (and:SI (reg:SI 138 [ _26 ])
+            (const_int 15 [0xf]))) "../Core/Src/system_stm32f4xx.c":263:52 -1
+     (nil))
+
+;; _28 = AHBPrescTable[_27];
+
+(insn 107 106 108 (set (reg/f:SI 167)
+        (symbol_ref:SI ("AHBPrescTable") [flags 0x2]  <var_decl 0000000006337c60 AHBPrescTable>)) "../Core/Src/system_stm32f4xx.c":263:22 -1
+     (nil))
+
+(insn 108 107 0 (set (reg:SI 140 [ _28 ])
+        (zero_extend:SI (mem/u:QI (plus:SI (reg/f:SI 167)
+                    (reg:SI 139 [ _27 ])) [0 AHBPrescTable[_27]+0 S1 A8]))) "../Core/Src/system_stm32f4xx.c":263:22 -1
+     (nil))
+
+;; tmp_44 = (uint32_t) _28;
+
+(insn 109 108 0 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])
+        (reg:SI 140 [ _28 ])) "../Core/Src/system_stm32f4xx.c":263:7 -1
+     (nil))
+
+;; SystemCoreClock.0_29 = SystemCoreClock;
+
+(insn 110 109 111 (set (reg/f:SI 168)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+
+(insn 111 110 0 (set (reg:SI 141 [ SystemCoreClock.0_29 ])
+        (mem/c:SI (reg/f:SI 168) [1 SystemCoreClock+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+
+;; _30 = SystemCoreClock.0_29 >> tmp_44;
+
+(insn 112 111 113 (set (reg:SI 169)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+
+(insn 113 112 0 (set (reg:SI 142 [ _30 ])
+        (lshiftrt:SI (reg:SI 141 [ SystemCoreClock.0_29 ])
+            (reg:SI 169))) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+
+;; SystemCoreClock = _30;
+
+(insn 114 113 115 (set (reg/f:SI 170)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+
+(insn 115 114 0 (set (mem/c:SI (reg/f:SI 170) [1 SystemCoreClock+0 S4 A32])
+        (reg:SI 142 [ _30 ])) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 6->7 to 14 failed.
+Merging block 16 into block 15...
+Merged blocks 15 and 16.
+Merged 15 and 16 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 6->7 to 14 failed.
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 113 [ _1 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":225:12 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 114 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 113 [ _1 ])
+                (const_int 8 [0x8])) [1 _1->CFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":225:12 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 143)
+        (and:SI (reg:SI 114 [ _2 ])
+            (const_int 12 [0xc]))) "../Core/Src/system_stm32f4xx.c":225:7 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])
+        (reg:SI 143)) "../Core/Src/system_stm32f4xx.c":225:7 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 144)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 144)
+            (const_int 8 [0x8]))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 43)
+            (pc))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil)
+ -> 43)
+;;  succ:       4 (FALLTHRU)
+;;              10
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+(note 12 11 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 12 16 4 (set (reg:SI 145)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 145)
+            (const_int 8 [0x8]))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+(jump_insn 17 16 18 4 (set (pc)
+        (if_then_else (gtu (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 96)
+            (pc))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil)
+ -> 96)
+;;  succ:       5 (FALLTHRU)
+;;              14
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+(note 18 17 19 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 5 (set (reg:SI 146)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+(insn 20 19 21 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 146)
+            (const_int 0 [0]))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+(jump_insn 21 20 22 5 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 29)
+            (pc))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil)
+ -> 29)
+;;  succ:       6 (FALLTHRU)
+;;              8
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+(note 22 21 23 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 6 (set (reg:SI 147)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+(insn 24 23 25 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 147)
+            (const_int 4 [0x4]))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil))
+(jump_insn 25 24 28 6 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 36)
+            (pc))) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil)
+ -> 36)
+;;  succ:       7 (FALLTHRU) ../Core/Src/system_stm32f4xx.c:227:3
+;;              9
+
+;; basic block 7, loop depth 0, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6 (FALLTHRU) ../Core/Src/system_stm32f4xx.c:227:3
+(note 28 25 26 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 26 28 27 7 (set (pc)
+        (label_ref 96)) "../Core/Src/system_stm32f4xx.c":227:3 -1
+     (nil)
+ -> 96)
+;;  succ:       14 [always] 
+
+(barrier 27 26 29)
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       5
+(code_label 29 27 30 8 7 (nil) [1 uses])
+(note 30 29 31 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 8 (set (reg/f:SI 148)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":230:23 -1
+     (nil))
+(insn 32 31 33 8 (set (reg:SI 149)
+        (const_int 16000000 [0xf42400])) "../Core/Src/system_stm32f4xx.c":230:23 -1
+     (nil))
+(insn 33 32 34 8 (set (mem/c:SI (reg/f:SI 148) [1 SystemCoreClock+0 S4 A32])
+        (reg:SI 149)) "../Core/Src/system_stm32f4xx.c":230:23 -1
+     (nil))
+(jump_insn 34 33 35 8 (set (pc)
+        (label_ref 101)) "../Core/Src/system_stm32f4xx.c":231:7 -1
+     (nil)
+ -> 101)
+;;  succ:       15 ../Core/Src/system_stm32f4xx.c:231:7
+
+(barrier 35 34 36)
+;; basic block 9, loop depth 0, maybe hot
+;;  prev block 8, next block 10, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       6
+(code_label 36 35 37 9 8 (nil) [1 uses])
+(note 37 36 38 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 38 37 39 9 (set (reg/f:SI 150)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":233:23 -1
+     (nil))
+(insn 39 38 40 9 (set (reg:SI 151)
+        (const_int 25000000 [0x17d7840])) "../Core/Src/system_stm32f4xx.c":233:23 -1
+     (nil))
+(insn 40 39 41 9 (set (mem/c:SI (reg/f:SI 150) [1 SystemCoreClock+0 S4 A32])
+        (reg:SI 151)) "../Core/Src/system_stm32f4xx.c":233:23 -1
+     (nil))
+(jump_insn 41 40 42 9 (set (pc)
+        (label_ref 101)) "../Core/Src/system_stm32f4xx.c":234:7 -1
+     (nil)
+ -> 101)
+;;  succ:       15 ../Core/Src/system_stm32f4xx.c:234:7
+
+(barrier 42 41 43)
+;; basic block 10, loop depth 0, maybe hot
+;;  prev block 9, next block 11, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2
+(code_label 43 42 44 10 5 (nil) [1 uses])
+(note 44 43 45 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 46 10 (set (reg/f:SI 115 [ _3 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":240:23 -1
+     (nil))
+(insn 46 45 47 10 (set (reg:SI 116 [ _4 ])
+        (mem/v:SI (plus:SI (reg/f:SI 115 [ _3 ])
+                (const_int 4 [0x4])) [1 _3->PLLCFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":240:23 -1
+     (nil))
+(insn 47 46 48 10 (set (reg:SI 117 [ _5 ])
+        (lshiftrt:SI (reg:SI 116 [ _4 ])
+            (const_int 22 [0x16]))) "../Core/Src/system_stm32f4xx.c":240:55 -1
+     (nil))
+(insn 48 47 49 10 (set (reg:SI 152)
+        (and:SI (reg:SI 117 [ _5 ])
+            (const_int 1 [0x1]))) "../Core/Src/system_stm32f4xx.c":240:17 -1
+     (nil))
+(insn 49 48 50 10 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 pllsource+0 S4 A32])
+        (reg:SI 152)) "../Core/Src/system_stm32f4xx.c":240:17 -1
+     (nil))
+(insn 50 49 51 10 (set (reg/f:SI 118 [ _6 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":241:17 -1
+     (nil))
+(insn 51 50 52 10 (set (reg:SI 119 [ _7 ])
+        (mem/v:SI (plus:SI (reg/f:SI 118 [ _6 ])
+                (const_int 4 [0x4])) [1 _6->PLLCFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":241:17 -1
+     (nil))
+(insn 52 51 53 10 (set (reg:SI 153)
+        (and:SI (reg:SI 119 [ _7 ])
+            (const_int 63 [0x3f]))) "../Core/Src/system_stm32f4xx.c":241:12 -1
+     (nil))
+(insn 53 52 54 10 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 pllm+0 S4 A64])
+        (reg:SI 153)) "../Core/Src/system_stm32f4xx.c":241:12 -1
+     (nil))
+(insn 54 53 55 10 (set (reg:SI 154)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 pllsource+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":243:10 -1
+     (nil))
+(insn 55 54 56 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 154)
+            (const_int 0 [0]))) "../Core/Src/system_stm32f4xx.c":243:10 -1
+     (nil))
+(jump_insn 56 55 57 10 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 69)
+            (pc))) "../Core/Src/system_stm32f4xx.c":243:10 -1
+     (nil)
+ -> 69)
+;;  succ:       11 (FALLTHRU)
+;;              12
+
+;; basic block 11, loop depth 0, maybe hot
+;;  prev block 10, next block 12, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       10 (FALLTHRU)
+(note 57 56 58 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 58 57 59 11 (set (reg:SI 155)
+        (const_int 25000000 [0x17d7840])) "../Core/Src/system_stm32f4xx.c":246:29 -1
+     (nil))
+(insn 59 58 60 11 (set (reg:SI 156)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 pllm+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":246:29 -1
+     (nil))
+(insn 60 59 61 11 (set (reg:SI 120 [ _8 ])
+        (udiv:SI (reg:SI 155)
+            (reg:SI 156))) "../Core/Src/system_stm32f4xx.c":246:29 -1
+     (nil))
+(insn 61 60 62 11 (set (reg/f:SI 121 [ _9 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":246:44 -1
+     (nil))
+(insn 62 61 63 11 (set (reg:SI 122 [ _10 ])
+        (mem/v:SI (plus:SI (reg/f:SI 121 [ _9 ])
+                (const_int 4 [0x4])) [1 _9->PLLCFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":246:44 -1
+     (nil))
+(insn 63 62 64 11 (set (reg:SI 123 [ _11 ])
+        (lshiftrt:SI (reg:SI 122 [ _10 ])
+            (const_int 6 [0x6]))) "../Core/Src/system_stm32f4xx.c":246:74 -1
+     (nil))
+(insn 64 63 65 11 (set (reg:SI 124 [ _12 ])
+        (zero_extract:SI (reg:SI 123 [ _11 ])
+            (const_int 9 [0x9])
+            (const_int 0 [0]))) "../Core/Src/system_stm32f4xx.c":246:74 -1
+     (nil))
+(insn 65 64 66 11 (set (reg:SI 157)
+        (mult:SI (reg:SI 124 [ _12 ])
+            (reg:SI 120 [ _8 ]))) "../Core/Src/system_stm32f4xx.c":246:16 -1
+     (nil))
+(insn 66 65 67 11 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 pllvco+0 S4 A32])
+        (reg:SI 157)) "../Core/Src/system_stm32f4xx.c":246:16 -1
+     (nil))
+(jump_insn 67 66 68 11 (set (pc)
+        (label_ref 80)) -1
+     (nil)
+ -> 80)
+;;  succ:       13
+
+(barrier 68 67 69)
+;; basic block 12, loop depth 0, maybe hot
+;;  prev block 11, next block 13, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       10
+(code_label 69 68 70 12 10 (nil) [1 uses])
+(note 70 69 71 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 71 70 72 12 (set (reg:SI 158)
+        (const_int 16000000 [0xf42400])) "../Core/Src/system_stm32f4xx.c":251:29 -1
+     (nil))
+(insn 72 71 73 12 (set (reg:SI 159)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 pllm+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":251:29 -1
+     (nil))
+(insn 73 72 74 12 (set (reg:SI 125 [ _13 ])
+        (udiv:SI (reg:SI 158)
+            (reg:SI 159))) "../Core/Src/system_stm32f4xx.c":251:29 -1
+     (nil))
+(insn 74 73 75 12 (set (reg/f:SI 126 [ _14 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":251:44 -1
+     (nil))
+(insn 75 74 76 12 (set (reg:SI 127 [ _15 ])
+        (mem/v:SI (plus:SI (reg/f:SI 126 [ _14 ])
+                (const_int 4 [0x4])) [1 _14->PLLCFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":251:44 -1
+     (nil))
+(insn 76 75 77 12 (set (reg:SI 128 [ _16 ])
+        (lshiftrt:SI (reg:SI 127 [ _15 ])
+            (const_int 6 [0x6]))) "../Core/Src/system_stm32f4xx.c":251:74 -1
+     (nil))
+(insn 77 76 78 12 (set (reg:SI 129 [ _17 ])
+        (zero_extract:SI (reg:SI 128 [ _16 ])
+            (const_int 9 [0x9])
+            (const_int 0 [0]))) "../Core/Src/system_stm32f4xx.c":251:74 -1
+     (nil))
+(insn 78 77 79 12 (set (reg:SI 160)
+        (mult:SI (reg:SI 129 [ _17 ])
+            (reg:SI 125 [ _13 ]))) "../Core/Src/system_stm32f4xx.c":251:16 -1
+     (nil))
+(insn 79 78 80 12 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 pllvco+0 S4 A32])
+        (reg:SI 160)) "../Core/Src/system_stm32f4xx.c":251:16 -1
+     (nil))
+;;  succ:       13 (FALLTHRU)
+
+;; basic block 13, loop depth 0, maybe hot
+;;  prev block 12, next block 14, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       11
+;;              12 (FALLTHRU)
+(code_label 80 79 81 13 11 (nil) [1 uses])
+(note 81 80 82 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 82 81 83 13 (set (reg/f:SI 130 [ _18 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":254:20 -1
+     (nil))
+(insn 83 82 84 13 (set (reg:SI 131 [ _19 ])
+        (mem/v:SI (plus:SI (reg/f:SI 130 [ _18 ])
+                (const_int 4 [0x4])) [1 _18->PLLCFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":254:20 -1
+     (nil))
+(insn 84 83 85 13 (set (reg:SI 132 [ _20 ])
+        (lshiftrt:SI (reg:SI 131 [ _19 ])
+            (const_int 16 [0x10]))) "../Core/Src/system_stm32f4xx.c":254:50 -1
+     (nil))
+(insn 85 84 86 13 (set (reg:SI 133 [ _21 ])
+        (and:SI (reg:SI 132 [ _20 ])
+            (const_int 3 [0x3]))) "../Core/Src/system_stm32f4xx.c":254:50 -1
+     (nil))
+(insn 86 85 87 13 (set (reg:SI 134 [ _22 ])
+        (plus:SI (reg:SI 133 [ _21 ])
+            (const_int 1 [0x1]))) "../Core/Src/system_stm32f4xx.c":254:56 -1
+     (nil))
+(insn 87 86 88 13 (set (reg:SI 161)
+        (ashift:SI (reg:SI 134 [ _22 ])
+            (const_int 1 [0x1]))) "../Core/Src/system_stm32f4xx.c":254:12 -1
+     (nil))
+(insn 88 87 89 13 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 pllp+0 S4 A32])
+        (reg:SI 161)) "../Core/Src/system_stm32f4xx.c":254:12 -1
+     (nil))
+(insn 89 88 90 13 (set (reg:SI 162)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 pllvco+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":255:31 -1
+     (nil))
+(insn 90 89 91 13 (set (reg:SI 163)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 pllp+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":255:31 -1
+     (nil))
+(insn 91 90 92 13 (set (reg:SI 135 [ _23 ])
+        (udiv:SI (reg:SI 162)
+            (reg:SI 163))) "../Core/Src/system_stm32f4xx.c":255:31 -1
+     (nil))
+(insn 92 91 93 13 (set (reg/f:SI 164)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":255:23 -1
+     (nil))
+(insn 93 92 94 13 (set (mem/c:SI (reg/f:SI 164) [1 SystemCoreClock+0 S4 A32])
+        (reg:SI 135 [ _23 ])) "../Core/Src/system_stm32f4xx.c":255:23 -1
+     (nil))
+(jump_insn 94 93 95 13 (set (pc)
+        (label_ref 101)) "../Core/Src/system_stm32f4xx.c":256:7 -1
+     (nil)
+ -> 101)
+;;  succ:       15 ../Core/Src/system_stm32f4xx.c:256:7
+
+(barrier 95 94 96)
+;; basic block 14, loop depth 0, maybe hot
+;;  prev block 13, next block 15, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       4
+;;              7 [always] 
+(code_label 96 95 97 14 6 (nil) [2 uses])
+(note 97 96 98 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 98 97 99 14 (set (reg/f:SI 165)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":258:23 -1
+     (nil))
+(insn 99 98 100 14 (set (reg:SI 166)
+        (const_int 16000000 [0xf42400])) "../Core/Src/system_stm32f4xx.c":258:23 -1
+     (nil))
+(insn 100 99 101 14 (set (mem/c:SI (reg/f:SI 165) [1 SystemCoreClock+0 S4 A32])
+        (reg:SI 166)) "../Core/Src/system_stm32f4xx.c":258:23 -1
+     (nil))
+;;  succ:       15 (FALLTHRU) ../Core/Src/system_stm32f4xx.c:259:7
+
+;; basic block 15, loop depth 0, maybe hot
+;;  prev block 14, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       8 ../Core/Src/system_stm32f4xx.c:231:7
+;;              9 ../Core/Src/system_stm32f4xx.c:234:7
+;;              13 ../Core/Src/system_stm32f4xx.c:256:7
+;;              14 (FALLTHRU) ../Core/Src/system_stm32f4xx.c:259:7
+(code_label 101 100 102 15 9 (nil) [3 uses])
+(note 102 101 103 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 103 102 104 15 (set (reg/f:SI 136 [ _24 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/system_stm32f4xx.c":263:28 -1
+     (nil))
+(insn 104 103 105 15 (set (reg:SI 137 [ _25 ])
+        (mem/v:SI (plus:SI (reg/f:SI 136 [ _24 ])
+                (const_int 8 [0x8])) [1 _24->CFGR+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":263:28 -1
+     (nil))
+(insn 105 104 106 15 (set (reg:SI 138 [ _26 ])
+        (lshiftrt:SI (reg:SI 137 [ _25 ])
+            (const_int 4 [0x4]))) "../Core/Src/system_stm32f4xx.c":263:52 -1
+     (nil))
+(insn 106 105 107 15 (set (reg:SI 139 [ _27 ])
+        (and:SI (reg:SI 138 [ _26 ])
+            (const_int 15 [0xf]))) "../Core/Src/system_stm32f4xx.c":263:52 -1
+     (nil))
+(insn 107 106 108 15 (set (reg/f:SI 167)
+        (symbol_ref:SI ("AHBPrescTable") [flags 0x2]  <var_decl 0000000006337c60 AHBPrescTable>)) "../Core/Src/system_stm32f4xx.c":263:22 -1
+     (nil))
+(insn 108 107 109 15 (set (reg:SI 140 [ _28 ])
+        (zero_extend:SI (mem/u:QI (plus:SI (reg/f:SI 167)
+                    (reg:SI 139 [ _27 ])) [0 AHBPrescTable[_27]+0 S1 A8]))) "../Core/Src/system_stm32f4xx.c":263:22 -1
+     (nil))
+(insn 109 108 110 15 (set (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])
+        (reg:SI 140 [ _28 ])) "../Core/Src/system_stm32f4xx.c":263:7 -1
+     (nil))
+(insn 110 109 111 15 (set (reg/f:SI 168)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+(insn 111 110 112 15 (set (reg:SI 141 [ SystemCoreClock.0_29 ])
+        (mem/c:SI (reg/f:SI 168) [1 SystemCoreClock+0 S4 A32])) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+(insn 112 111 113 15 (set (reg:SI 169)
+        (mem/c:SI (plus:SI (reg/f:SI 108 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 tmp+0 S4 A64])) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+(insn 113 112 114 15 (set (reg:SI 142 [ _30 ])
+        (lshiftrt:SI (reg:SI 141 [ SystemCoreClock.0_29 ])
+            (reg:SI 169))) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+(insn 114 113 115 15 (set (reg/f:SI 170)
+        (symbol_ref:SI ("SystemCoreClock") [flags 0x2]  <var_decl 0000000006337bd0 SystemCoreClock>)) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+(insn 115 114 0 15 (set (mem/c:SI (reg/f:SI 170) [1 SystemCoreClock+0 S4 A32])
+        (reg:SI 142 [ _30 ])) "../Core/Src/system_stm32f4xx.c":265:19 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU) ../Core/Src/system_stm32f4xx.c:266:1
+

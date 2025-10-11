@@ -1,0 +1,255 @@
+
+;; Function NMI_Handler (NMI_Handler, funcdef_no=134, decl_uid=7899, cgraph_uid=139, symbol_order=138)
+
+
+
+try_optimize_cfg iteration 1
+
+Removing jump 8.
+
+
+try_optimize_cfg iteration 2
+
+
+
+try_optimize_cfg iteration 1
+
+fix_loop_structure: fixing up loops for function
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU)
+
+;; basic block 3, loop depth 1, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2 [always]  (FALLTHRU)
+;;              4 [always]  (FALLTHRU)
+(code_label 7 2 5 3 2 (nil) [0 uses])
+(note 5 7 6 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       4 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:75:10
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 3, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       3 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:75:10
+(note 6 5 0 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       3 [always]  (FALLTHRU)
+
+
+;; Function HardFault_Handler (HardFault_Handler, funcdef_no=135, decl_uid=7901, cgraph_uid=140, symbol_order=139)
+
+
+
+try_optimize_cfg iteration 1
+
+Removing jump 8.
+
+
+try_optimize_cfg iteration 2
+
+
+
+try_optimize_cfg iteration 1
+
+fix_loop_structure: fixing up loops for function
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU)
+
+;; basic block 3, loop depth 1, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2 [always]  (FALLTHRU)
+;;              4 [always]  (FALLTHRU)
+(code_label 7 2 5 3 4 (nil) [0 uses])
+(note 5 7 6 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       4 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:89:9
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 3, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       3 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:89:9
+(note 6 5 0 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       3 [always]  (FALLTHRU)
+
+
+;; Function MemManage_Handler (MemManage_Handler, funcdef_no=136, decl_uid=7903, cgraph_uid=141, symbol_order=140)
+
+
+
+try_optimize_cfg iteration 1
+
+Removing jump 8.
+
+
+try_optimize_cfg iteration 2
+
+
+
+try_optimize_cfg iteration 1
+
+fix_loop_structure: fixing up loops for function
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU)
+
+;; basic block 3, loop depth 1, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2 [always]  (FALLTHRU)
+;;              4 [always]  (FALLTHRU)
+(code_label 7 2 5 3 6 (nil) [0 uses])
+(note 5 7 6 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       4 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:104:9
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 3, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       3 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:104:9
+(note 6 5 0 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       3 [always]  (FALLTHRU)
+
+
+;; Function BusFault_Handler (BusFault_Handler, funcdef_no=137, decl_uid=7905, cgraph_uid=142, symbol_order=141)
+
+
+
+try_optimize_cfg iteration 1
+
+Removing jump 8.
+
+
+try_optimize_cfg iteration 2
+
+
+
+try_optimize_cfg iteration 1
+
+fix_loop_structure: fixing up loops for function
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU)
+
+;; basic block 3, loop depth 1, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2 [always]  (FALLTHRU)
+;;              4 [always]  (FALLTHRU)
+(code_label 7 2 5 3 8 (nil) [0 uses])
+(note 5 7 6 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       4 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:119:9
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 3, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       3 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:119:9
+(note 6 5 0 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       3 [always]  (FALLTHRU)
+
+
+;; Function UsageFault_Handler (UsageFault_Handler, funcdef_no=138, decl_uid=7907, cgraph_uid=143, symbol_order=142)
+
+
+
+try_optimize_cfg iteration 1
+
+Removing jump 8.
+
+
+try_optimize_cfg iteration 2
+
+
+
+try_optimize_cfg iteration 1
+
+fix_loop_structure: fixing up loops for function
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU)
+
+;; basic block 3, loop depth 1, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2 [always]  (FALLTHRU)
+;;              4 [always]  (FALLTHRU)
+(code_label 7 2 5 3 10 (nil) [0 uses])
+(note 5 7 6 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       4 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:134:9
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 3, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       3 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:134:9
+(note 6 5 0 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       3 [always]  (FALLTHRU)
+
+
+;; Function SVC_Handler (SVC_Handler, funcdef_no=139, decl_uid=7909, cgraph_uid=144, symbol_order=143)
+
+
+
+try_optimize_cfg iteration 1
+
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 0 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       EXIT [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:152:1
+
+
+;; Function DebugMon_Handler (DebugMon_Handler, funcdef_no=140, decl_uid=7911, cgraph_uid=145, symbol_order=144)
+
+
+
+try_optimize_cfg iteration 1
+
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 0 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       EXIT [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:165:1
+
+
+;; Function PendSV_Handler (PendSV_Handler, funcdef_no=141, decl_uid=7913, cgraph_uid=146, symbol_order=145)
+
+
+
+try_optimize_cfg iteration 1
+
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 0 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       EXIT [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:178:1
+
+
+;; Function SysTick_Handler (SysTick_Handler, funcdef_no=142, decl_uid=7915, cgraph_uid=147, symbol_order=146)
+
+
+
+try_optimize_cfg iteration 1
+
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(call_insn 5 2 0 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_IncTick") [flags 0x41]  <function_decl 0000000006909b00 HAL_IncTick>) [0 HAL_IncTick S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/stm32f4xx_it.c":188:3 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+;;  succ:       EXIT [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:192:1
+

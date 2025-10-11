@@ -1,0 +1,976 @@
+
+;; Function HAL_FLASHEx_StopFlashInterfaceClk (HAL_FLASHEx_StopFlashInterfaceClk, funcdef_no=134, decl_uid=7327, cgraph_uid=135, symbol_order=134)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+    r127: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a14 (r127,l0) best LO_REGS, allocno LO_REGS
+    r126: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a0 (r126,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r125: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a1 (r125,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r124: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a6 (r124,l0) best LO_REGS, allocno LO_REGS
+    r123: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a3 (r123,l0) best LO_REGS, allocno LO_REGS
+    r122: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a2 (r122,l0) best LO_REGS, allocno LO_REGS
+    r121: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a4 (r121,l0) best LO_REGS, allocno LO_REGS
+    r120: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a5 (r120,l0) best LO_REGS, allocno LO_REGS
+    r119: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a7 (r119,l0) best LO_REGS, allocno LO_REGS
+    r118: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a8 (r118,l0) best LO_REGS, allocno LO_REGS
+    r117: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a9 (r117,l0) best LO_REGS, allocno LO_REGS
+    r116: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a11 (r116,l0) best LO_REGS, allocno LO_REGS
+    r115: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a10 (r115,l0) best LO_REGS, allocno LO_REGS
+    r114: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a12 (r114,l0) best LO_REGS, allocno LO_REGS
+    r113: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a13 (r113,l0) best LO_REGS, allocno LO_REGS
+
+  a0(r126,l0) costs: LO_REGS:2000 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:25000 VFP_LO_REGS:25000 ALL_REGS:25000 MEM:11000
+  a1(r125,l0) costs: LO_REGS:0 HI_REGS:0 CALLER_SAVE_REGS:0 EVEN_REG:0 GENERAL_REGS:0 VFP_D0_D7_REGS:24000 VFP_LO_REGS:24000 ALL_REGS:24000 MEM:6000
+  a2(r122,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a3(r123,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a4(r121,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a5(r120,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a6(r124,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:15000 VFP_LO_REGS:15000 ALL_REGS:15000 MEM:10000
+  a7(r119,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a8(r118,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a9(r117,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a10(r115,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a11(r116,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a12(r114,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a13(r113,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a14(r127,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+
+   Insn 30(l0): point = 0
+   Insn 29(l0): point = 2
+   Insn 25(l0): point = 4
+   Insn 22(l0): point = 6
+   Insn 21(l0): point = 8
+   Insn 20(l0): point = 10
+   Insn 19(l0): point = 12
+   Insn 18(l0): point = 14
+   Insn 17(l0): point = 16
+   Insn 16(l0): point = 18
+   Insn 15(l0): point = 20
+   Insn 14(l0): point = 22
+   Insn 13(l0): point = 24
+   Insn 12(l0): point = 26
+   Insn 11(l0): point = 28
+   Insn 10(l0): point = 30
+   Insn 9(l0): point = 32
+   Insn 8(l0): point = 34
+   Insn 7(l0): point = 36
+   Insn 6(l0): point = 38
+   Insn 5(l0): point = 40
+ a0(r126): [3..4]
+ a1(r125): [5..6]
+ a2(r122): [9..12]
+ a3(r123): [9..10]
+ a4(r121): [11..14]
+ a5(r120): [15..16]
+ a6(r124): [18..18]
+ a7(r119): [21..22]
+ a8(r118): [23..24]
+ a9(r117): [25..26]
+ a10(r115): [29..32]
+ a11(r116): [29..30]
+ a12(r114): [31..34]
+ a13(r113): [35..36]
+ a14(r127): [39..40]
+Compressing live ranges: from 43 to 25 - 58%
+Ranges after the compression:
+ a0(r126): [0..1]
+ a1(r125): [2..3]
+ a2(r122): [4..7]
+ a3(r123): [4..5]
+ a4(r121): [6..7]
+ a5(r120): [8..9]
+ a6(r124): [10..10]
+ a7(r119): [11..12]
+ a8(r118): [13..14]
+ a9(r117): [15..16]
+ a10(r115): [17..20]
+ a11(r116): [17..18]
+ a12(r114): [19..20]
+ a13(r113): [21..22]
+ a14(r127): [23..24]
+  regions=1, blocks=3, points=25
+    allocnos=15 (big 0), copies=0, conflicts=0, ranges=15
+Disposition:
+   13:r113 l0     3   12:r114 l0     3   10:r115 l0     2   11:r116 l0     3
+    9:r117 l0     3    8:r118 l0     3    7:r119 l0     3    5:r120 l0     3
+    4:r121 l0     3    2:r122 l0     2    3:r123 l0     3    6:r124 l0     3
+    1:r125 l0     3    0:r126 l0     3   14:r127 l0     3
++++Costs: overall 2000, reg 2000, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+HAL_FLASHEx_StopFlashInterfaceClk
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 0 [r0] 7 [r7]
+;;  ref usage 	r0={2d,2u} r1={1d} r2={1d} r3={1d} r7={1d,2u} r13={1d,2u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,5u} r103={1d,1u} r113={1d,1u} r114={1d,1u} r115={1d,1u} r116={1d,1u} r117={1d,1u} r118={1d,1u} r119={1d,1u} r120={1d,1u} r121={1d,1u} r122={1d,1u} r123={1d,1u} r124={1d} r125={1d,1u} r126={1d,1u} r127={1d,1u} 
+;;    total ref usage 67{41d,26u,0e} in 21{21 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	 0 [r0] 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 127)
+        (const_int 0 [0])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 7 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])
+        (reg:SI 127)) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 127)
+        (nil)))
+(insn 7 6 8 2 (set (reg/f:SI 113 [ _1 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 114 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 113 [ _1 ])
+                (const_int 64 [0x40])) [1 _1->APB1ENR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 113 [ _1 ])
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:SI 115 [ _3 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 116 [ _4 ])
+        (ior:SI (reg:SI 114 [ _2 ])
+            (const_int 268435456 [0x10000000]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 106 {*iorsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 114 [ _2 ])
+        (nil)))
+(insn 11 10 12 2 (set (mem/v:SI (plus:SI (reg/f:SI 115 [ _3 ])
+                (const_int 64 [0x40])) [1 _3->APB1ENR+0 S4 A32])
+        (reg:SI 116 [ _4 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 116 [ _4 ])
+        (expr_list:REG_DEAD (reg/f:SI 115 [ _3 ])
+            (nil))))
+(insn 12 11 13 2 (set (reg/f:SI 117 [ _5 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 118 [ _6 ])
+        (mem/v:SI (plus:SI (reg/f:SI 117 [ _5 ])
+                (const_int 64 [0x40])) [1 _5->APB1ENR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 117 [ _5 ])
+        (nil)))
+(insn 14 13 15 2 (set (reg:SI 119 [ _7 ])
+        (and:SI (reg:SI 118 [ _6 ])
+            (const_int 268435456 [0x10000000]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 90 {*arm_andsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 118 [ _6 ])
+        (nil)))
+(insn 15 14 16 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])
+        (reg:SI 119 [ _7 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 119 [ _7 ])
+        (nil)))
+(insn 16 15 17 2 (set (reg:SI 124 [ vol.0_16 ])
+        (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":97:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_UNUSED (reg:SI 124 [ vol.0_16 ])
+        (nil)))
+(insn 17 16 18 2 (set (reg/f:SI 120 [ _8 ])
+        (const_int 1073770496 [0x40007000])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":99:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 121 [ _9 ])
+        (mem/v:SI (reg/f:SI 120 [ _8 ]) [1 _8->CR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":99:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 120 [ _8 ])
+        (nil)))
+(insn 19 18 20 2 (set (reg/f:SI 122 [ _10 ])
+        (const_int 1073770496 [0x40007000])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":99:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 123 [ _11 ])
+        (ior:SI (reg:SI 121 [ _9 ])
+            (const_int 2097152 [0x200000]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":99:3 106 {*iorsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 121 [ _9 ])
+        (nil)))
+(insn 21 20 22 2 (set (mem/v:SI (reg/f:SI 122 [ _10 ]) [1 _10->CR+0 S4 A32])
+        (reg:SI 123 [ _11 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":99:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 123 [ _11 ])
+        (expr_list:REG_DEAD (reg/f:SI 122 [ _10 ])
+            (nil))))
+(insn 22 21 25 2 (set (reg:SI 125 [ _18 ])
+        (const_int 0 [0])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":101:10 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 25 22 29 2 (set (reg:SI 126 [ <retval> ])
+        (reg:SI 125 [ _18 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":101:10 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 125 [ _18 ])
+        (nil)))
+(insn 29 25 30 2 (set (reg/i:SI 0 r0)
+        (reg:SI 126 [ <retval> ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":102:1 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 126 [ <retval> ])
+        (nil)))
+(insn 30 29 0 2 (use (reg/i:SI 0 r0)) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":102:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+
+;; Function HAL_FLASHEx_StartFlashInterfaceClk (HAL_FLASHEx_StartFlashInterfaceClk, funcdef_no=135, decl_uid=7329, cgraph_uid=136, symbol_order=135)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+    r127: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a14 (r127,l0) best LO_REGS, allocno LO_REGS
+    r126: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a0 (r126,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r125: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a1 (r125,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r124: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a6 (r124,l0) best LO_REGS, allocno LO_REGS
+    r123: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a3 (r123,l0) best LO_REGS, allocno LO_REGS
+    r122: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a2 (r122,l0) best LO_REGS, allocno LO_REGS
+    r121: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a4 (r121,l0) best LO_REGS, allocno LO_REGS
+    r120: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a5 (r120,l0) best LO_REGS, allocno LO_REGS
+    r119: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a7 (r119,l0) best LO_REGS, allocno LO_REGS
+    r118: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a8 (r118,l0) best LO_REGS, allocno LO_REGS
+    r117: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a9 (r117,l0) best LO_REGS, allocno LO_REGS
+    r116: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a11 (r116,l0) best LO_REGS, allocno LO_REGS
+    r115: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a10 (r115,l0) best LO_REGS, allocno LO_REGS
+    r114: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a12 (r114,l0) best LO_REGS, allocno LO_REGS
+    r113: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a13 (r113,l0) best LO_REGS, allocno LO_REGS
+
+  a0(r126,l0) costs: LO_REGS:2000 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:25000 VFP_LO_REGS:25000 ALL_REGS:25000 MEM:11000
+  a1(r125,l0) costs: LO_REGS:0 HI_REGS:0 CALLER_SAVE_REGS:0 EVEN_REG:0 GENERAL_REGS:0 VFP_D0_D7_REGS:24000 VFP_LO_REGS:24000 ALL_REGS:24000 MEM:6000
+  a2(r122,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a3(r123,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a4(r121,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a5(r120,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a6(r124,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:15000 VFP_LO_REGS:15000 ALL_REGS:15000 MEM:10000
+  a7(r119,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a8(r118,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a9(r117,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a10(r115,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a11(r116,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a12(r114,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a13(r113,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a14(r127,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+
+   Insn 30(l0): point = 0
+   Insn 29(l0): point = 2
+   Insn 25(l0): point = 4
+   Insn 22(l0): point = 6
+   Insn 21(l0): point = 8
+   Insn 20(l0): point = 10
+   Insn 19(l0): point = 12
+   Insn 18(l0): point = 14
+   Insn 17(l0): point = 16
+   Insn 16(l0): point = 18
+   Insn 15(l0): point = 20
+   Insn 14(l0): point = 22
+   Insn 13(l0): point = 24
+   Insn 12(l0): point = 26
+   Insn 11(l0): point = 28
+   Insn 10(l0): point = 30
+   Insn 9(l0): point = 32
+   Insn 8(l0): point = 34
+   Insn 7(l0): point = 36
+   Insn 6(l0): point = 38
+   Insn 5(l0): point = 40
+ a0(r126): [3..4]
+ a1(r125): [5..6]
+ a2(r122): [9..12]
+ a3(r123): [9..10]
+ a4(r121): [11..14]
+ a5(r120): [15..16]
+ a6(r124): [18..18]
+ a7(r119): [21..22]
+ a8(r118): [23..24]
+ a9(r117): [25..26]
+ a10(r115): [29..32]
+ a11(r116): [29..30]
+ a12(r114): [31..34]
+ a13(r113): [35..36]
+ a14(r127): [39..40]
+Compressing live ranges: from 43 to 25 - 58%
+Ranges after the compression:
+ a0(r126): [0..1]
+ a1(r125): [2..3]
+ a2(r122): [4..7]
+ a3(r123): [4..5]
+ a4(r121): [6..7]
+ a5(r120): [8..9]
+ a6(r124): [10..10]
+ a7(r119): [11..12]
+ a8(r118): [13..14]
+ a9(r117): [15..16]
+ a10(r115): [17..20]
+ a11(r116): [17..18]
+ a12(r114): [19..20]
+ a13(r113): [21..22]
+ a14(r127): [23..24]
+  regions=1, blocks=3, points=25
+    allocnos=15 (big 0), copies=0, conflicts=0, ranges=15
+Disposition:
+   13:r113 l0     3   12:r114 l0     3   10:r115 l0     2   11:r116 l0     3
+    9:r117 l0     3    8:r118 l0     3    7:r119 l0     3    5:r120 l0     3
+    4:r121 l0     3    2:r122 l0     2    3:r123 l0     3    6:r124 l0     3
+    1:r125 l0     3    0:r126 l0     3   14:r127 l0     3
++++Costs: overall 2000, reg 2000, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+HAL_FLASHEx_StartFlashInterfaceClk
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 0 [r0] 7 [r7]
+;;  ref usage 	r0={2d,2u} r1={1d} r2={1d} r3={1d} r7={1d,2u} r13={1d,2u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,5u} r103={1d,1u} r113={1d,1u} r114={1d,1u} r115={1d,1u} r116={1d,1u} r117={1d,1u} r118={1d,1u} r119={1d,1u} r120={1d,1u} r121={1d,1u} r122={1d,1u} r123={1d,1u} r124={1d} r125={1d,1u} r126={1d,1u} r127={1d,1u} 
+;;    total ref usage 67{41d,26u,0e} in 21{21 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	 0 [r0] 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 127)
+        (const_int 0 [0])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 7 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])
+        (reg:SI 127)) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 127)
+        (nil)))
+(insn 7 6 8 2 (set (reg/f:SI 113 [ _1 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 114 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 113 [ _1 ])
+                (const_int 64 [0x40])) [1 _1->APB1ENR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 113 [ _1 ])
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:SI 115 [ _3 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 116 [ _4 ])
+        (ior:SI (reg:SI 114 [ _2 ])
+            (const_int 268435456 [0x10000000]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 106 {*iorsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 114 [ _2 ])
+        (nil)))
+(insn 11 10 12 2 (set (mem/v:SI (plus:SI (reg/f:SI 115 [ _3 ])
+                (const_int 64 [0x40])) [1 _3->APB1ENR+0 S4 A32])
+        (reg:SI 116 [ _4 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 116 [ _4 ])
+        (expr_list:REG_DEAD (reg/f:SI 115 [ _3 ])
+            (nil))))
+(insn 12 11 13 2 (set (reg/f:SI 117 [ _5 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 118 [ _6 ])
+        (mem/v:SI (plus:SI (reg/f:SI 117 [ _5 ])
+                (const_int 64 [0x40])) [1 _5->APB1ENR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 117 [ _5 ])
+        (nil)))
+(insn 14 13 15 2 (set (reg:SI 119 [ _7 ])
+        (and:SI (reg:SI 118 [ _6 ])
+            (const_int 268435456 [0x10000000]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 90 {*arm_andsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 118 [ _6 ])
+        (nil)))
+(insn 15 14 16 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])
+        (reg:SI 119 [ _7 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 119 [ _7 ])
+        (nil)))
+(insn 16 15 17 2 (set (reg:SI 124 [ vol.1_16 ])
+        (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":114:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_UNUSED (reg:SI 124 [ vol.1_16 ])
+        (nil)))
+(insn 17 16 18 2 (set (reg/f:SI 120 [ _8 ])
+        (const_int 1073770496 [0x40007000])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":116:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 121 [ _9 ])
+        (mem/v:SI (reg/f:SI 120 [ _8 ]) [1 _8->CR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":116:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 120 [ _8 ])
+        (nil)))
+(insn 19 18 20 2 (set (reg/f:SI 122 [ _10 ])
+        (const_int 1073770496 [0x40007000])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":116:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 123 [ _11 ])
+        (and:SI (reg:SI 121 [ _9 ])
+            (const_int -2097153 [0xffffffffffdfffff]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":116:3 90 {*arm_andsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 121 [ _9 ])
+        (nil)))
+(insn 21 20 22 2 (set (mem/v:SI (reg/f:SI 122 [ _10 ]) [1 _10->CR+0 S4 A32])
+        (reg:SI 123 [ _11 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":116:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 123 [ _11 ])
+        (expr_list:REG_DEAD (reg/f:SI 122 [ _10 ])
+            (nil))))
+(insn 22 21 25 2 (set (reg:SI 125 [ _18 ])
+        (const_int 0 [0])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":118:10 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 25 22 29 2 (set (reg:SI 126 [ <retval> ])
+        (reg:SI 125 [ _18 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":118:10 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 125 [ _18 ])
+        (nil)))
+(insn 29 25 30 2 (set (reg/i:SI 0 r0)
+        (reg:SI 126 [ <retval> ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":119:1 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 126 [ <retval> ])
+        (nil)))
+(insn 30 29 0 2 (use (reg/i:SI 0 r0)) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":119:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+
+;; Function HAL_FLASHEx_EnableFlashSleepMode (HAL_FLASHEx_EnableFlashSleepMode, funcdef_no=136, decl_uid=7331, cgraph_uid=137, symbol_order=136)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+    r127: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a14 (r127,l0) best LO_REGS, allocno LO_REGS
+    r126: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a0 (r126,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r125: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a1 (r125,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r124: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a6 (r124,l0) best LO_REGS, allocno LO_REGS
+    r123: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a3 (r123,l0) best LO_REGS, allocno LO_REGS
+    r122: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a2 (r122,l0) best LO_REGS, allocno LO_REGS
+    r121: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a4 (r121,l0) best LO_REGS, allocno LO_REGS
+    r120: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a5 (r120,l0) best LO_REGS, allocno LO_REGS
+    r119: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a7 (r119,l0) best LO_REGS, allocno LO_REGS
+    r118: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a8 (r118,l0) best LO_REGS, allocno LO_REGS
+    r117: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a9 (r117,l0) best LO_REGS, allocno LO_REGS
+    r116: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a11 (r116,l0) best LO_REGS, allocno LO_REGS
+    r115: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a10 (r115,l0) best LO_REGS, allocno LO_REGS
+    r114: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a12 (r114,l0) best LO_REGS, allocno LO_REGS
+    r113: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a13 (r113,l0) best LO_REGS, allocno LO_REGS
+
+  a0(r126,l0) costs: LO_REGS:2000 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:25000 VFP_LO_REGS:25000 ALL_REGS:25000 MEM:11000
+  a1(r125,l0) costs: LO_REGS:0 HI_REGS:0 CALLER_SAVE_REGS:0 EVEN_REG:0 GENERAL_REGS:0 VFP_D0_D7_REGS:24000 VFP_LO_REGS:24000 ALL_REGS:24000 MEM:6000
+  a2(r122,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a3(r123,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a4(r121,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a5(r120,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a6(r124,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:15000 VFP_LO_REGS:15000 ALL_REGS:15000 MEM:10000
+  a7(r119,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a8(r118,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a9(r117,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a10(r115,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a11(r116,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a12(r114,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a13(r113,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a14(r127,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+
+   Insn 30(l0): point = 0
+   Insn 29(l0): point = 2
+   Insn 25(l0): point = 4
+   Insn 22(l0): point = 6
+   Insn 21(l0): point = 8
+   Insn 20(l0): point = 10
+   Insn 19(l0): point = 12
+   Insn 18(l0): point = 14
+   Insn 17(l0): point = 16
+   Insn 16(l0): point = 18
+   Insn 15(l0): point = 20
+   Insn 14(l0): point = 22
+   Insn 13(l0): point = 24
+   Insn 12(l0): point = 26
+   Insn 11(l0): point = 28
+   Insn 10(l0): point = 30
+   Insn 9(l0): point = 32
+   Insn 8(l0): point = 34
+   Insn 7(l0): point = 36
+   Insn 6(l0): point = 38
+   Insn 5(l0): point = 40
+ a0(r126): [3..4]
+ a1(r125): [5..6]
+ a2(r122): [9..12]
+ a3(r123): [9..10]
+ a4(r121): [11..14]
+ a5(r120): [15..16]
+ a6(r124): [18..18]
+ a7(r119): [21..22]
+ a8(r118): [23..24]
+ a9(r117): [25..26]
+ a10(r115): [29..32]
+ a11(r116): [29..30]
+ a12(r114): [31..34]
+ a13(r113): [35..36]
+ a14(r127): [39..40]
+Compressing live ranges: from 43 to 25 - 58%
+Ranges after the compression:
+ a0(r126): [0..1]
+ a1(r125): [2..3]
+ a2(r122): [4..7]
+ a3(r123): [4..5]
+ a4(r121): [6..7]
+ a5(r120): [8..9]
+ a6(r124): [10..10]
+ a7(r119): [11..12]
+ a8(r118): [13..14]
+ a9(r117): [15..16]
+ a10(r115): [17..20]
+ a11(r116): [17..18]
+ a12(r114): [19..20]
+ a13(r113): [21..22]
+ a14(r127): [23..24]
+  regions=1, blocks=3, points=25
+    allocnos=15 (big 0), copies=0, conflicts=0, ranges=15
+Disposition:
+   13:r113 l0     3   12:r114 l0     3   10:r115 l0     2   11:r116 l0     3
+    9:r117 l0     3    8:r118 l0     3    7:r119 l0     3    5:r120 l0     3
+    4:r121 l0     3    2:r122 l0     2    3:r123 l0     3    6:r124 l0     3
+    1:r125 l0     3    0:r126 l0     3   14:r127 l0     3
++++Costs: overall 2000, reg 2000, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+HAL_FLASHEx_EnableFlashSleepMode
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 0 [r0] 7 [r7]
+;;  ref usage 	r0={2d,2u} r1={1d} r2={1d} r3={1d} r7={1d,2u} r13={1d,2u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,5u} r103={1d,1u} r113={1d,1u} r114={1d,1u} r115={1d,1u} r116={1d,1u} r117={1d,1u} r118={1d,1u} r119={1d,1u} r120={1d,1u} r121={1d,1u} r122={1d,1u} r123={1d,1u} r124={1d} r125={1d,1u} r126={1d,1u} r127={1d,1u} 
+;;    total ref usage 67{41d,26u,0e} in 21{21 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	 0 [r0] 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 127)
+        (const_int 0 [0])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 7 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])
+        (reg:SI 127)) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 127)
+        (nil)))
+(insn 7 6 8 2 (set (reg/f:SI 113 [ _1 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 114 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 113 [ _1 ])
+                (const_int 64 [0x40])) [1 _1->APB1ENR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 113 [ _1 ])
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:SI 115 [ _3 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 116 [ _4 ])
+        (ior:SI (reg:SI 114 [ _2 ])
+            (const_int 268435456 [0x10000000]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 106 {*iorsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 114 [ _2 ])
+        (nil)))
+(insn 11 10 12 2 (set (mem/v:SI (plus:SI (reg/f:SI 115 [ _3 ])
+                (const_int 64 [0x40])) [1 _3->APB1ENR+0 S4 A32])
+        (reg:SI 116 [ _4 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 116 [ _4 ])
+        (expr_list:REG_DEAD (reg/f:SI 115 [ _3 ])
+            (nil))))
+(insn 12 11 13 2 (set (reg/f:SI 117 [ _5 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 118 [ _6 ])
+        (mem/v:SI (plus:SI (reg/f:SI 117 [ _5 ])
+                (const_int 64 [0x40])) [1 _5->APB1ENR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 117 [ _5 ])
+        (nil)))
+(insn 14 13 15 2 (set (reg:SI 119 [ _7 ])
+        (and:SI (reg:SI 118 [ _6 ])
+            (const_int 268435456 [0x10000000]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 90 {*arm_andsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 118 [ _6 ])
+        (nil)))
+(insn 15 14 16 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])
+        (reg:SI 119 [ _7 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 119 [ _7 ])
+        (nil)))
+(insn 16 15 17 2 (set (reg:SI 124 [ vol.2_16 ])
+        (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":131:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_UNUSED (reg:SI 124 [ vol.2_16 ])
+        (nil)))
+(insn 17 16 18 2 (set (reg/f:SI 120 [ _8 ])
+        (const_int 1073770496 [0x40007000])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":133:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 121 [ _9 ])
+        (mem/v:SI (reg/f:SI 120 [ _8 ]) [1 _8->CR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":133:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 120 [ _8 ])
+        (nil)))
+(insn 19 18 20 2 (set (reg/f:SI 122 [ _10 ])
+        (const_int 1073770496 [0x40007000])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":133:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 123 [ _11 ])
+        (ior:SI (reg:SI 121 [ _9 ])
+            (const_int 1048576 [0x100000]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":133:3 106 {*iorsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 121 [ _9 ])
+        (nil)))
+(insn 21 20 22 2 (set (mem/v:SI (reg/f:SI 122 [ _10 ]) [1 _10->CR+0 S4 A32])
+        (reg:SI 123 [ _11 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":133:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 123 [ _11 ])
+        (expr_list:REG_DEAD (reg/f:SI 122 [ _10 ])
+            (nil))))
+(insn 22 21 25 2 (set (reg:SI 125 [ _18 ])
+        (const_int 0 [0])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":135:10 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 25 22 29 2 (set (reg:SI 126 [ <retval> ])
+        (reg:SI 125 [ _18 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":135:10 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 125 [ _18 ])
+        (nil)))
+(insn 29 25 30 2 (set (reg/i:SI 0 r0)
+        (reg:SI 126 [ <retval> ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":136:1 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 126 [ <retval> ])
+        (nil)))
+(insn 30 29 0 2 (use (reg/i:SI 0 r0)) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":136:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+
+;; Function HAL_FLASHEx_DisableFlashSleepMode (HAL_FLASHEx_DisableFlashSleepMode, funcdef_no=137, decl_uid=7333, cgraph_uid=138, symbol_order=137)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+    r127: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a14 (r127,l0) best LO_REGS, allocno LO_REGS
+    r126: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a0 (r126,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r125: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a1 (r125,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r124: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a6 (r124,l0) best LO_REGS, allocno LO_REGS
+    r123: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a3 (r123,l0) best LO_REGS, allocno LO_REGS
+    r122: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a2 (r122,l0) best LO_REGS, allocno LO_REGS
+    r121: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a4 (r121,l0) best LO_REGS, allocno LO_REGS
+    r120: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a5 (r120,l0) best LO_REGS, allocno LO_REGS
+    r119: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a7 (r119,l0) best LO_REGS, allocno LO_REGS
+    r118: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a8 (r118,l0) best LO_REGS, allocno LO_REGS
+    r117: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a9 (r117,l0) best LO_REGS, allocno LO_REGS
+    r116: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a11 (r116,l0) best LO_REGS, allocno LO_REGS
+    r115: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a10 (r115,l0) best LO_REGS, allocno LO_REGS
+    r114: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a12 (r114,l0) best LO_REGS, allocno LO_REGS
+    r113: preferred LO_REGS, alternative GENERAL_REGS, allocno LO_REGS
+    a13 (r113,l0) best LO_REGS, allocno LO_REGS
+
+  a0(r126,l0) costs: LO_REGS:2000 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:25000 VFP_LO_REGS:25000 ALL_REGS:25000 MEM:11000
+  a1(r125,l0) costs: LO_REGS:0 HI_REGS:0 CALLER_SAVE_REGS:0 EVEN_REG:0 GENERAL_REGS:0 VFP_D0_D7_REGS:24000 VFP_LO_REGS:24000 ALL_REGS:24000 MEM:6000
+  a2(r122,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a3(r123,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a4(r121,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a5(r120,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a6(r124,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:15000 VFP_LO_REGS:15000 ALL_REGS:15000 MEM:10000
+  a7(r119,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a8(r118,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a9(r117,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a10(r115,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a11(r116,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a12(r114,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:30000 VFP_LO_REGS:30000 ALL_REGS:30000 MEM:20000
+  a13(r113,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+  a14(r127,l0) costs: LO_REGS:0 HI_REGS:2000 CALLER_SAVE_REGS:2000 EVEN_REG:2000 GENERAL_REGS:2000 VFP_D0_D7_REGS:29000 VFP_LO_REGS:29000 ALL_REGS:29000 MEM:15000
+
+   Insn 30(l0): point = 0
+   Insn 29(l0): point = 2
+   Insn 25(l0): point = 4
+   Insn 22(l0): point = 6
+   Insn 21(l0): point = 8
+   Insn 20(l0): point = 10
+   Insn 19(l0): point = 12
+   Insn 18(l0): point = 14
+   Insn 17(l0): point = 16
+   Insn 16(l0): point = 18
+   Insn 15(l0): point = 20
+   Insn 14(l0): point = 22
+   Insn 13(l0): point = 24
+   Insn 12(l0): point = 26
+   Insn 11(l0): point = 28
+   Insn 10(l0): point = 30
+   Insn 9(l0): point = 32
+   Insn 8(l0): point = 34
+   Insn 7(l0): point = 36
+   Insn 6(l0): point = 38
+   Insn 5(l0): point = 40
+ a0(r126): [3..4]
+ a1(r125): [5..6]
+ a2(r122): [9..12]
+ a3(r123): [9..10]
+ a4(r121): [11..14]
+ a5(r120): [15..16]
+ a6(r124): [18..18]
+ a7(r119): [21..22]
+ a8(r118): [23..24]
+ a9(r117): [25..26]
+ a10(r115): [29..32]
+ a11(r116): [29..30]
+ a12(r114): [31..34]
+ a13(r113): [35..36]
+ a14(r127): [39..40]
+Compressing live ranges: from 43 to 25 - 58%
+Ranges after the compression:
+ a0(r126): [0..1]
+ a1(r125): [2..3]
+ a2(r122): [4..7]
+ a3(r123): [4..5]
+ a4(r121): [6..7]
+ a5(r120): [8..9]
+ a6(r124): [10..10]
+ a7(r119): [11..12]
+ a8(r118): [13..14]
+ a9(r117): [15..16]
+ a10(r115): [17..20]
+ a11(r116): [17..18]
+ a12(r114): [19..20]
+ a13(r113): [21..22]
+ a14(r127): [23..24]
+  regions=1, blocks=3, points=25
+    allocnos=15 (big 0), copies=0, conflicts=0, ranges=15
+Disposition:
+   13:r113 l0     3   12:r114 l0     3   10:r115 l0     2   11:r116 l0     3
+    9:r117 l0     3    8:r118 l0     3    7:r119 l0     3    5:r120 l0     3
+    4:r121 l0     3    2:r122 l0     2    3:r123 l0     3    6:r124 l0     3
+    1:r125 l0     3    0:r126 l0     3   14:r127 l0     3
++++Costs: overall 2000, reg 2000, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+HAL_FLASHEx_DisableFlashSleepMode
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 0 [r0] 7 [r7]
+;;  ref usage 	r0={2d,2u} r1={1d} r2={1d} r3={1d} r7={1d,2u} r13={1d,2u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,5u} r103={1d,1u} r113={1d,1u} r114={1d,1u} r115={1d,1u} r116={1d,1u} r117={1d,1u} r118={1d,1u} r119={1d,1u} r120={1d,1u} r121={1d,1u} r122={1d,1u} r123={1d,1u} r124={1d} r125={1d,1u} r126={1d,1u} r127={1d,1u} 
+;;    total ref usage 67{41d,26u,0e} in 21{21 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	 0 [r0] 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 127)
+        (const_int 0 [0])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 7 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])
+        (reg:SI 127)) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 127)
+        (nil)))
+(insn 7 6 8 2 (set (reg/f:SI 113 [ _1 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 114 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 113 [ _1 ])
+                (const_int 64 [0x40])) [1 _1->APB1ENR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 113 [ _1 ])
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:SI 115 [ _3 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 116 [ _4 ])
+        (ior:SI (reg:SI 114 [ _2 ])
+            (const_int 268435456 [0x10000000]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 106 {*iorsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 114 [ _2 ])
+        (nil)))
+(insn 11 10 12 2 (set (mem/v:SI (plus:SI (reg/f:SI 115 [ _3 ])
+                (const_int 64 [0x40])) [1 _3->APB1ENR+0 S4 A32])
+        (reg:SI 116 [ _4 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 116 [ _4 ])
+        (expr_list:REG_DEAD (reg/f:SI 115 [ _3 ])
+            (nil))))
+(insn 12 11 13 2 (set (reg/f:SI 117 [ _5 ])
+        (const_int 1073887232 [0x40023800])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 118 [ _6 ])
+        (mem/v:SI (plus:SI (reg/f:SI 117 [ _5 ])
+                (const_int 64 [0x40])) [1 _5->APB1ENR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 117 [ _5 ])
+        (nil)))
+(insn 14 13 15 2 (set (reg:SI 119 [ _7 ])
+        (and:SI (reg:SI 118 [ _6 ])
+            (const_int 268435456 [0x10000000]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 90 {*arm_andsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 118 [ _6 ])
+        (nil)))
+(insn 15 14 16 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])
+        (reg:SI 119 [ _7 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 119 [ _7 ])
+        (nil)))
+(insn 16 15 17 2 (set (reg:SI 124 [ vol.3_16 ])
+        (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [1 tmpreg+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":148:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_UNUSED (reg:SI 124 [ vol.3_16 ])
+        (nil)))
+(insn 17 16 18 2 (set (reg/f:SI 120 [ _8 ])
+        (const_int 1073770496 [0x40007000])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":150:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 121 [ _9 ])
+        (mem/v:SI (reg/f:SI 120 [ _8 ]) [1 _8->CR+0 S4 A32])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":150:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 120 [ _8 ])
+        (nil)))
+(insn 19 18 20 2 (set (reg/f:SI 122 [ _10 ])
+        (const_int 1073770496 [0x40007000])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":150:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 123 [ _11 ])
+        (and:SI (reg:SI 121 [ _9 ])
+            (const_int -1048577 [0xffffffffffefffff]))) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":150:3 90 {*arm_andsi3_insn}
+     (expr_list:REG_DEAD (reg:SI 121 [ _9 ])
+        (nil)))
+(insn 21 20 22 2 (set (mem/v:SI (reg/f:SI 122 [ _10 ]) [1 _10->CR+0 S4 A32])
+        (reg:SI 123 [ _11 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":150:3 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 123 [ _11 ])
+        (expr_list:REG_DEAD (reg/f:SI 122 [ _10 ])
+            (nil))))
+(insn 22 21 25 2 (set (reg:SI 125 [ _18 ])
+        (const_int 0 [0])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":152:10 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 25 22 29 2 (set (reg:SI 126 [ <retval> ])
+        (reg:SI 125 [ _18 ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":152:10 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 125 [ _18 ])
+        (nil)))
+(insn 29 25 30 2 (set (reg/i:SI 0 r0)
+        (reg:SI 126 [ <retval> ])) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":153:1 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_DEAD (reg:SI 126 [ <retval> ])
+        (nil)))
+(insn 30 29 0 2 (use (reg/i:SI 0 r0)) "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c":153:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 0 [r0] 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+

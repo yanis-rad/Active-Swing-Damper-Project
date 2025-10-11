@@ -1,0 +1,2 @@
+../Core/Periphs/MOT_DRV.c:13:6:Motor_Drive	1
+../Core/Periphs/MOT_DRV.c:20:6:PWM_PinState_Set	5

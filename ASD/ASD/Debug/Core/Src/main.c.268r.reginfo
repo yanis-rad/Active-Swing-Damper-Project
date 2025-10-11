@@ -1,0 +1,1149 @@
+
+;; Function main (main, funcdef_no=134, decl_uid=7913, cgraph_uid=139, symbol_order=144)
+
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(call_insn 5 2 6 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_Init") [flags 0x41]  <function_decl 00000000068c9600 HAL_Init>) [0 HAL_Init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":84:3 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(call_insn 6 5 7 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("SystemClock_Config") [flags 0x3]  <function_decl 00000000068d2200 SystemClock_Config>) [0 SystemClock_Config S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":91:3 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(call_insn 7 6 8 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("MX_GPIO_Init") [flags 0x3]  <function_decl 00000000068d2300 MX_GPIO_Init>) [0 MX_GPIO_Init S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":98:3 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(call_insn 8 7 9 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("MX_I2C1_Init") [flags 0x3]  <function_decl 00000000068d2400 MX_I2C1_Init>) [0 MX_I2C1_Init S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":99:3 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(call_insn 9 8 10 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("MX_USART1_UART_Init") [flags 0x3]  <function_decl 00000000068d2500 MX_USART1_UART_Init>) [0 MX_USART1_UART_Init S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":100:3 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 10 9 11 2 (set (reg:SI 3 r3)
+        (const_int 100 [0x64])) "../Core/Src/main.c":102:6 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 2 r2)
+        (const_int 1 [0x1])) "../Core/Src/main.c":102:6 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 1 r1)
+        (const_int 181 [0xb5])) "../Core/Src/main.c":102:6 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 0 r0)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":102:6 749 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 14 13 15 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_I2C_IsDeviceReady") [flags 0x41]  <function_decl 000000000687e100 HAL_I2C_IsDeviceReady>) [0 HAL_I2C_IsDeviceReady S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":102:6 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:HI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 15 14 16 2 (set (reg:SI 124)
+        (reg:SI 0 r0)) "../Core/Src/main.c":102:6 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 113 [ _1 ])
+        (reg:SI 124)) "../Core/Src/main.c":102:6 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 17 16 18 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 113 [ _1 ])
+            (const_int 0 [0]))) "../Core/Src/main.c":102:5 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 27)
+            (pc))) "../Core/Src/main.c":102:5 273 {arm_cond_branch}
+     (nil)
+ -> 27)
+;;  succ:       3 (FALLTHRU)
+;;              4
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2 (FALLTHRU)
+(note 19 18 20 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 3 (set (reg:SI 3 r3)
+        (const_int 100 [0x64])) "../Core/Src/main.c":104:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 21 20 22 3 (set (reg:SI 2 r2)
+        (const_int 50 [0x32])) "../Core/Src/main.c":104:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 3 (set (reg:SI 1 r1)
+        (symbol_ref:SI ("txdata") [flags 0x2]  <var_decl 0000000006852a20 txdata>)) "../Core/Src/main.c":104:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 3 (set (reg:SI 0 r0)
+        (symbol_ref:SI ("huart1") [flags 0x2]  <var_decl 0000000006852900 huart1>)) "../Core/Src/main.c":104:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 24 23 27 3 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_UART_Transmit") [flags 0x41]  <function_decl 00000000068b3600 HAL_UART_Transmit>) [0 HAL_UART_Transmit S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":104:4 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:HI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+;;  succ:       5 [always]  (FALLTHRU)
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 5, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2
+(code_label 27 24 28 4 2 (nil) [1 uses])
+(note 28 27 29 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 30 4 (set (reg:SI 3 r3)
+        (const_int 100 [0x64])) "../Core/Src/main.c":108:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 30 29 31 4 (set (reg:SI 2 r2)
+        (const_int 50 [0x32])) "../Core/Src/main.c":108:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 31 30 32 4 (set (reg:SI 1 r1)
+        (symbol_ref:SI ("txdata_err") [flags 0x2]  <var_decl 0000000006852ab0 txdata_err>)) "../Core/Src/main.c":108:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 4 (set (reg:SI 0 r0)
+        (symbol_ref:SI ("huart1") [flags 0x2]  <var_decl 0000000006852900 huart1>)) "../Core/Src/main.c":108:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 33 32 34 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_UART_Transmit") [flags 0x41]  <function_decl 00000000068b3600 HAL_UART_Transmit>) [0 HAL_UART_Transmit S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":108:4 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:HI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+;;  succ:       5 (FALLTHRU)
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       3 [always]  (FALLTHRU)
+;;              4 (FALLTHRU)
+(code_label 34 33 35 5 3 (nil) [0 uses])
+(note 35 34 78 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       6 [always]  (FALLTHRU)
+
+;; basic block 6, loop depth 1, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       5 [always]  (FALLTHRU)
+;;              7 [always]  (FALLTHRU)
+(code_label 78 35 36 6 4 (nil) [0 uses])
+(note 36 78 37 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 37 36 38 6 (set (reg:SI 125)
+        (const_int 100 [0x64])) "../Core/Src/main.c":117:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 38 37 39 6 (set (mem:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 8 [0x8])) [0  S4 A32])
+        (reg:SI 125)) "../Core/Src/main.c":117:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 39 38 40 6 (set (reg:SI 126)
+        (const_int 2 [0x2])) "../Core/Src/main.c":117:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 40 39 41 6 (set (mem:SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])) [0  S4 A32])
+        (reg:SI 126)) "../Core/Src/main.c":117:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 41 40 42 6 (set (reg/f:SI 127)
+        (symbol_ref:SI ("i2cdata") [flags 0x2]  <var_decl 0000000006852990 i2cdata>)) "../Core/Src/main.c":117:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 42 41 43 6 (set (mem:SI (reg/f:SI 13 sp) [0  S4 A32])
+        (reg/f:SI 127)) "../Core/Src/main.c":117:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 43 42 44 6 (set (reg:SI 3 r3)
+        (const_int 1 [0x1])) "../Core/Src/main.c":117:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 44 43 45 6 (set (reg:SI 2 r2)
+        (const_int 7 [0x7])) "../Core/Src/main.c":117:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 45 44 46 6 (set (reg:SI 1 r1)
+        (const_int 180 [0xb4])) "../Core/Src/main.c":117:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 46 45 47 6 (set (reg:SI 0 r0)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":117:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 47 46 48 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_I2C_Mem_Read") [flags 0x41]  <function_decl 000000000687e000 HAL_I2C_Mem_Read>) [0 HAL_I2C_Mem_Read S4 A32])
+                    (const_int 16 [0x10])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":117:4 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:HI (use (reg:SI 1 r1))
+                (expr_list:HI (use (reg:SI 2 r2))
+                    (expr_list:HI (use (reg:SI 3 r3))
+                        (expr_list:SI (use (mem/f:SI (reg/f:SI 13 sp) [0  S4 A32]))
+                            (expr_list:HI (use (mem:SI (plus:SI (reg/f:SI 13 sp)
+                                            (const_int 4 [0x4])) [0  S2 A32]))
+                                (expr_list:SI (use (mem:SI (plus:SI (reg/f:SI 13 sp)
+                                                (const_int 8 [0x8])) [0  S4 A32]))
+                                    (nil))))))))))
+(insn 48 47 49 6 (set (reg/f:SI 128)
+        (symbol_ref:SI ("i2cdata") [flags 0x2]  <var_decl 0000000006852990 i2cdata>)) "../Core/Src/main.c":118:27 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 49 48 50 6 (set (reg:SI 114 [ _2 ])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 128)
+                    (const_int 1 [0x1])) [0 i2cdata[1]+0 S1 A8]))) "../Core/Src/main.c":118:27 1029 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 50 49 51 6 (set (reg:SI 115 [ _3 ])
+        (reg:SI 114 [ _2 ])) "../Core/Src/main.c":118:27 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 51 50 52 6 (set (reg:SI 116 [ _4 ])
+        (ashift:SI (reg:SI 115 [ _3 ])
+            (const_int 8 [0x8]))) "../Core/Src/main.c":118:31 147 {*arm_shiftsi3}
+     (nil))
+(insn 52 51 53 6 (set (reg/f:SI 129)
+        (symbol_ref:SI ("i2cdata") [flags 0x2]  <var_decl 0000000006852990 i2cdata>)) "../Core/Src/main.c":118:47 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 53 52 54 6 (set (reg:SI 117 [ _5 ])
+        (zero_extend:SI (mem/c:QI (reg/f:SI 129) [0 i2cdata[0]+0 S1 A32]))) "../Core/Src/main.c":118:47 1029 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 54 53 55 6 (set (reg:SI 118 [ _6 ])
+        (reg:SI 117 [ _5 ])) "../Core/Src/main.c":118:47 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 55 54 56 6 (set (reg:SI 130)
+        (ior:SI (reg:SI 116 [ _4 ])
+            (reg:SI 118 [ _6 ]))) "../Core/Src/main.c":118:8 106 {*iorsi3_insn}
+     (nil))
+(insn 56 55 57 6 (set (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [14 raw_temp+0 S4 A32])
+        (reg:SI 130)) "../Core/Src/main.c":118:8 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 57 56 58 6 (set (reg:SI 0 r0)
+        (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [14 raw_temp+0 S4 A32])) "../Core/Src/main.c":119:26 749 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn/u 58 57 59 6 (parallel [
+            (set (reg:DF 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__aeabi_i2d") [flags 0x41]  <function_decl 0000000005ff0a00 __aeabi_i2d>) [0  S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":119:26 291 {*call_value_symbol}
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list (use (reg:SI 0 r0))
+            (nil))))
+(insn 59 58 60 6 (set (reg:DF 119 [ _7 ])
+        (reg:DF 0 r0)) "../Core/Src/main.c":119:26 760 {*thumb2_movdf_vfp}
+     (expr_list:REG_EQUAL (float:DF (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                    (const_int -4 [0xfffffffffffffffc])) [14 raw_temp+0 S4 A32]))
+        (nil)))
+(insn 60 59 61 6 (set (reg:DF 2 r2)
+        (const_double:DF 2.00000000000000004163336342344337026588618755341e-2 [0x0.a3d70a3d70a3d8p-5])) "../Core/Src/main.c":119:26 760 {*thumb2_movdf_vfp}
+     (nil))
+(insn 61 60 62 6 (set (reg:DF 0 r0)
+        (reg:DF 119 [ _7 ])) "../Core/Src/main.c":119:26 760 {*thumb2_movdf_vfp}
+     (nil))
+(call_insn/u 62 61 63 6 (parallel [
+            (set (reg:DF 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__aeabi_dmul") [flags 0x41]  <function_decl 0000000005fedc00 __aeabi_dmul>) [0  S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":119:26 291 {*call_value_symbol}
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list (use (reg:DF 2 r2))
+            (expr_list (use (reg:DF 0 r0))
+                (nil)))))
+(insn 63 62 64 6 (set (reg:DF 131)
+        (reg:DF 0 r0)) "../Core/Src/main.c":119:26 760 {*thumb2_movdf_vfp}
+     (expr_list:REG_EQUAL (mult:DF (reg:DF 119 [ _7 ])
+            (const_double:DF 2.00000000000000004163336342344337026588618755341e-2 [0x0.a3d70a3d70a3d8p-5]))
+        (nil)))
+(insn 64 63 65 6 (set (reg:DF 120 [ _8 ])
+        (reg:DF 131)) "../Core/Src/main.c":119:26 760 {*thumb2_movdf_vfp}
+     (nil))
+(insn 65 64 66 6 (set (reg:DF 2 r2)
+        (const_double:DF 2.731499999999999772626324556767940521240234375e+2 [0x0.8893333333333p+9])) "../Core/Src/main.c":119:32 760 {*thumb2_movdf_vfp}
+     (nil))
+(insn 66 65 67 6 (set (reg:DF 0 r0)
+        (reg:DF 120 [ _8 ])) "../Core/Src/main.c":119:32 760 {*thumb2_movdf_vfp}
+     (nil))
+(call_insn/u 67 66 68 6 (parallel [
+            (set (reg:DF 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__aeabi_dsub") [flags 0x41]  <function_decl 0000000005fede00 __aeabi_dsub>) [0  S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":119:32 291 {*call_value_symbol}
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list (use (reg:DF 2 r2))
+            (expr_list (use (reg:DF 0 r0))
+                (nil)))))
+(insn 68 67 69 6 (set (reg:DF 132)
+        (reg:DF 0 r0)) "../Core/Src/main.c":119:32 760 {*thumb2_movdf_vfp}
+     (expr_list:REG_EQUAL (minus:DF (reg:DF 120 [ _8 ])
+            (const_double:DF 2.731499999999999772626324556767940521240234375e+2 [0x0.8893333333333p+9]))
+        (nil)))
+(insn 69 68 70 6 (set (reg:DF 121 [ _9 ])
+        (reg:DF 132)) "../Core/Src/main.c":119:32 760 {*thumb2_movdf_vfp}
+     (nil))
+(insn 70 69 71 6 (set (reg:DF 0 r0)
+        (reg:DF 121 [ _9 ])) "../Core/Src/main.c":119:16 760 {*thumb2_movdf_vfp}
+     (nil))
+(call_insn/u 71 70 72 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__aeabi_d2iz") [flags 0x41]  <function_decl 0000000005ff0000 __aeabi_d2iz>) [0  S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":119:16 291 {*call_value_symbol}
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list (use (reg:DF 0 r0))
+            (nil))))
+(insn 72 71 73 6 (set (reg:SI 122 [ _10 ])
+        (reg:SI 0 r0)) "../Core/Src/main.c":119:16 749 {*thumb2_movsi_vfp}
+     (expr_list:REG_EQUAL (fix:SI (reg:DF 121 [ _9 ]))
+        (nil)))
+(insn 73 72 74 6 (set (reg/f:SI 133)
+        (symbol_ref:SI ("temperature") [flags 0x2]  <var_decl 0000000006852b40 temperature>)) "../Core/Src/main.c":119:16 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 74 73 75 6 (set (mem/c:SI (reg/f:SI 133) [14 temperature+0 S4 A32])
+        (reg:SI 122 [ _10 ])) "../Core/Src/main.c":119:16 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 75 74 76 6 (set (reg:SI 0 r0)
+        (const_int 100 [0x64])) "../Core/Src/main.c":120:4 749 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 76 75 77 6 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_Delay") [flags 0x41]  <function_decl 00000000068c9c00 HAL_Delay>) [0 HAL_Delay S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":120:4 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+;;  succ:       7 (FALLTHRU) ../Core/Src/main.c:115:3
+
+;; basic block 7, loop depth 1, maybe hot
+;;  prev block 6, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       6 (FALLTHRU) ../Core/Src/main.c:115:3
+(note 77 76 0 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       6 [always]  (FALLTHRU)
+
+
+;; Function SystemClock_Config (SystemClock_Config, funcdef_no=135, decl_uid=7905, cgraph_uid=140, symbol_order=145)
+
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 131)
+        (plus:SI (reg/f:SI 102 sfp)
+            (const_int -48 [0xffffffffffffffd0]))) "../Core/Src/main.c":132:22 7 {*arm_addsi3}
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 132)
+        (const_int 48 [0x30])) "../Core/Src/main.c":132:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 2 r2)
+        (reg:SI 132)) "../Core/Src/main.c":132:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 1 r1)
+        (const_int 0 [0])) "../Core/Src/main.c":132:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 0 r0)
+        (reg:SI 131)) "../Core/Src/main.c":132:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 10 9 12 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0000000005eb0800 __builtin_memset>) [0 __builtin_memset S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":132:22 291 {*call_value_symbol}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (set (reg:SI 0 r0)
+                (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 0 r0))
+                (expr_list:SI (use (reg:SI 1 r1))
+                    (expr_list:SI (use (reg:SI 2 r2))
+                        (nil)))))))
+(insn 12 10 13 2 (set (reg:SI 134)
+        (plus:SI (reg/f:SI 102 sfp)
+            (const_int -68 [0xffffffffffffffbc]))) "../Core/Src/main.c":133:22 7 {*arm_addsi3}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 135)
+        (const_int 0 [0])) "../Core/Src/main.c":133:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 13 15 2 (set (mem/c:SI (reg:SI 134) [4 RCC_ClkInitStruct+0 S4 A32])
+        (reg:SI 135)) "../Core/Src/main.c":133:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 15 14 16 2 (set (mem/c:SI (plus:SI (reg:SI 134)
+                (const_int 4 [0x4])) [4 RCC_ClkInitStruct+4 S4 A32])
+        (reg:SI 135)) "../Core/Src/main.c":133:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 17 2 (set (mem/c:SI (plus:SI (reg:SI 134)
+                (const_int 8 [0x8])) [4 RCC_ClkInitStruct+8 S4 A32])
+        (reg:SI 135)) "../Core/Src/main.c":133:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 17 16 18 2 (set (mem/c:SI (plus:SI (reg:SI 134)
+                (const_int 12 [0xc])) [4 RCC_ClkInitStruct+12 S4 A32])
+        (reg:SI 135)) "../Core/Src/main.c":133:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 2 (set (mem/c:SI (plus:SI (reg:SI 134)
+                (const_int 16 [0x10])) [4 RCC_ClkInitStruct+16 S4 A32])
+        (reg:SI 135)) "../Core/Src/main.c":133:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 136)
+        (const_int 0 [0])) "../Core/Src/main.c":137:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 20 19 21 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -72 [0xffffffffffffffb8])) [2 tmpreg+0 S4 A64])
+        (reg:SI 136)) "../Core/Src/main.c":137:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 21 20 22 2 (set (reg/f:SI 113 [ _1 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/main.c":137:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 114 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 113 [ _1 ])
+                (const_int 64 [0x40])) [2 _1->APB1ENR+0 S4 A32])) "../Core/Src/main.c":137:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 2 (set (reg/f:SI 115 [ _3 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/main.c":137:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 116 [ _4 ])
+        (ior:SI (reg:SI 114 [ _2 ])
+            (const_int 268435456 [0x10000000]))) "../Core/Src/main.c":137:3 106 {*iorsi3_insn}
+     (nil))
+(insn 25 24 26 2 (set (mem/v:SI (plus:SI (reg/f:SI 115 [ _3 ])
+                (const_int 64 [0x40])) [2 _3->APB1ENR+0 S4 A32])
+        (reg:SI 116 [ _4 ])) "../Core/Src/main.c":137:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 26 25 27 2 (set (reg/f:SI 117 [ _5 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/main.c":137:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 27 26 28 2 (set (reg:SI 118 [ _6 ])
+        (mem/v:SI (plus:SI (reg/f:SI 117 [ _5 ])
+                (const_int 64 [0x40])) [2 _5->APB1ENR+0 S4 A32])) "../Core/Src/main.c":137:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 28 27 29 2 (set (reg:SI 119 [ _7 ])
+        (and:SI (reg:SI 118 [ _6 ])
+            (const_int 268435456 [0x10000000]))) "../Core/Src/main.c":137:3 90 {*arm_andsi3_insn}
+     (nil))
+(insn 29 28 30 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -72 [0xffffffffffffffb8])) [2 tmpreg+0 S4 A64])
+        (reg:SI 119 [ _7 ])) "../Core/Src/main.c":137:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 129 [ vol.0_25 ])
+        (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -72 [0xffffffffffffffb8])) [2 tmpreg+0 S4 A64])) "../Core/Src/main.c":137:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 31 30 32 2 (set (reg:SI 137)
+        (const_int 0 [0])) "../Core/Src/main.c":138:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -76 [0xffffffffffffffb4])) [2 tmpreg+0 S4 A32])
+        (reg:SI 137)) "../Core/Src/main.c":138:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 33 32 34 2 (set (reg/f:SI 120 [ _8 ])
+        (const_int 1073770496 [0x40007000])) "../Core/Src/main.c":138:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 34 33 35 2 (set (reg:SI 121 [ _9 ])
+        (mem/v:SI (reg/f:SI 120 [ _8 ]) [2 _8->CR+0 S4 A32])) "../Core/Src/main.c":138:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 35 34 36 2 (set (reg/f:SI 122 [ _10 ])
+        (const_int 1073770496 [0x40007000])) "../Core/Src/main.c":138:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 36 35 37 2 (set (reg:SI 123 [ _11 ])
+        (ior:SI (reg:SI 121 [ _9 ])
+            (const_int 49152 [0xc000]))) "../Core/Src/main.c":138:3 106 {*iorsi3_insn}
+     (nil))
+(insn 37 36 38 2 (set (mem/v:SI (reg/f:SI 122 [ _10 ]) [2 _10->CR+0 S4 A32])
+        (reg:SI 123 [ _11 ])) "../Core/Src/main.c":138:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 38 37 39 2 (set (reg/f:SI 124 [ _12 ])
+        (const_int 1073770496 [0x40007000])) "../Core/Src/main.c":138:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 39 38 40 2 (set (reg:SI 125 [ _13 ])
+        (mem/v:SI (reg/f:SI 124 [ _12 ]) [2 _12->CR+0 S4 A32])) "../Core/Src/main.c":138:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 40 39 41 2 (set (reg:SI 126 [ _14 ])
+        (and:SI (reg:SI 125 [ _13 ])
+            (const_int 49152 [0xc000]))) "../Core/Src/main.c":138:3 90 {*arm_andsi3_insn}
+     (nil))
+(insn 41 40 42 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -76 [0xffffffffffffffb4])) [2 tmpreg+0 S4 A32])
+        (reg:SI 126 [ _14 ])) "../Core/Src/main.c":138:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 42 41 43 2 (set (reg:SI 130 [ vol.1_29 ])
+        (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -76 [0xffffffffffffffb4])) [2 tmpreg+0 S4 A32])) "../Core/Src/main.c":138:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 43 42 44 2 (set (reg:SI 138)
+        (const_int 2 [0x2])) "../Core/Src/main.c":143:36 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 44 43 45 2 (set (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -48 [0xffffffffffffffd0])) [2 RCC_OscInitStruct.OscillatorType+0 S4 A64])
+        (reg:SI 138)) "../Core/Src/main.c":143:36 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 45 44 46 2 (set (reg:SI 139)
+        (const_int 1 [0x1])) "../Core/Src/main.c":144:30 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 46 45 47 2 (set (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -36 [0xffffffffffffffdc])) [2 RCC_OscInitStruct.HSIState+0 S4 A32])
+        (reg:SI 139)) "../Core/Src/main.c":144:30 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 47 46 48 2 (set (reg:SI 140)
+        (const_int 16 [0x10])) "../Core/Src/main.c":145:41 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 48 47 49 2 (set (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -32 [0xffffffffffffffe0])) [2 RCC_OscInitStruct.HSICalibrationValue+0 S4 A64])
+        (reg:SI 140)) "../Core/Src/main.c":145:41 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 49 48 50 2 (set (reg:SI 141)
+        (const_int 0 [0])) "../Core/Src/main.c":146:34 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 50 49 51 2 (set (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -24 [0xffffffffffffffe8])) [2 RCC_OscInitStruct.PLL.PLLState+0 S4 A64])
+        (reg:SI 141)) "../Core/Src/main.c":146:34 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 51 50 52 2 (set (reg:SI 142)
+        (plus:SI (reg/f:SI 102 sfp)
+            (const_int -48 [0xffffffffffffffd0]))) "../Core/Src/main.c":147:7 7 {*arm_addsi3}
+     (nil))
+(insn 52 51 53 2 (set (reg:SI 0 r0)
+        (reg:SI 142)) "../Core/Src/main.c":147:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 53 52 54 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_RCC_OscConfig") [flags 0x41]  <function_decl 000000000673f400 HAL_RCC_OscConfig>) [0 HAL_RCC_OscConfig S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":147:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 54 53 55 2 (set (reg:SI 143)
+        (reg:SI 0 r0)) "../Core/Src/main.c":147:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 55 54 56 2 (set (reg:SI 127 [ _15 ])
+        (reg:SI 143)) "../Core/Src/main.c":147:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 56 55 57 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 127 [ _15 ])
+            (const_int 0 [0]))) "../Core/Src/main.c":147:6 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 57 56 58 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 60)
+            (pc))) "../Core/Src/main.c":147:6 273 {arm_cond_branch}
+     (nil)
+ -> 60)
+;;  succ:       3 (FALLTHRU)
+;;              4
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2 (FALLTHRU)
+(note 58 57 59 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(call_insn 59 58 60 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("Error_Handler") [flags 0x3]  <function_decl 00000000068d2100 Error_Handler>) [0 Error_Handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":149:5 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 5, flags: (NEW, REACHABLE, RTL, MODIFIED, VISITED)
+;;  pred:       2
+;;              3 (FALLTHRU)
+(code_label 60 59 61 4 8 (nil) [1 uses])
+(note 61 60 62 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 63 4 (set (reg:SI 144)
+        (const_int 15 [0xf])) "../Core/Src/main.c":154:31 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 63 62 64 4 (set (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -68 [0xffffffffffffffbc])) [2 RCC_ClkInitStruct.ClockType+0 S4 A32])
+        (reg:SI 144)) "../Core/Src/main.c":154:31 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 64 63 65 4 (set (reg:SI 145)
+        (const_int 0 [0])) "../Core/Src/main.c":156:34 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 65 64 66 4 (set (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -64 [0xffffffffffffffc0])) [2 RCC_ClkInitStruct.SYSCLKSource+0 S4 A32])
+        (reg:SI 145)) "../Core/Src/main.c":156:34 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 66 65 67 4 (set (reg:SI 146)
+        (const_int 0 [0])) "../Core/Src/main.c":157:35 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 67 66 68 4 (set (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -60 [0xffffffffffffffc4])) [2 RCC_ClkInitStruct.AHBCLKDivider+0 S4 A32])
+        (reg:SI 146)) "../Core/Src/main.c":157:35 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 68 67 69 4 (set (reg:SI 147)
+        (const_int 0 [0])) "../Core/Src/main.c":158:36 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 69 68 70 4 (set (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -56 [0xffffffffffffffc8])) [2 RCC_ClkInitStruct.APB1CLKDivider+0 S4 A32])
+        (reg:SI 147)) "../Core/Src/main.c":158:36 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 70 69 71 4 (set (reg:SI 148)
+        (const_int 0 [0])) "../Core/Src/main.c":159:36 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 71 70 72 4 (set (mem/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -52 [0xffffffffffffffcc])) [2 RCC_ClkInitStruct.APB2CLKDivider+0 S4 A32])
+        (reg:SI 148)) "../Core/Src/main.c":159:36 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 72 71 73 4 (set (reg:SI 149)
+        (plus:SI (reg/f:SI 102 sfp)
+            (const_int -68 [0xffffffffffffffbc]))) "../Core/Src/main.c":161:7 7 {*arm_addsi3}
+     (nil))
+(insn 73 72 74 4 (set (reg:SI 1 r1)
+        (const_int 0 [0])) "../Core/Src/main.c":161:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 74 73 75 4 (set (reg:SI 0 r0)
+        (reg:SI 149)) "../Core/Src/main.c":161:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 75 74 76 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_RCC_ClockConfig") [flags 0x41]  <function_decl 000000000673f500 HAL_RCC_ClockConfig>) [0 HAL_RCC_ClockConfig S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":161:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 76 75 77 4 (set (reg:SI 150)
+        (reg:SI 0 r0)) "../Core/Src/main.c":161:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 77 76 78 4 (set (reg:SI 128 [ _16 ])
+        (reg:SI 150)) "../Core/Src/main.c":161:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 78 77 79 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 128 [ _16 ])
+            (const_int 0 [0]))) "../Core/Src/main.c":161:6 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 79 78 80 4 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 84)
+            (pc))) "../Core/Src/main.c":161:6 273 {arm_cond_branch}
+     (nil)
+ -> 84)
+;;  succ:       5 (FALLTHRU)
+;;              6 ../Core/Src/main.c:165:1
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       4 (FALLTHRU)
+(note 80 79 81 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(call_insn 81 80 84 5 (parallel [
+            (call (mem:SI (symbol_ref:SI ("Error_Handler") [flags 0x3]  <function_decl 00000000068d2100 Error_Handler>) [0 Error_Handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":163:5 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+;;  succ:       6 (FALLTHRU) ../Core/Src/main.c:165:1
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU) ../Core/Src/main.c:165:1
+;;              4 ../Core/Src/main.c:165:1
+(code_label 84 81 85 6 7 (nil) [1 uses])
+(note 85 84 0 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function MX_I2C1_Init (MX_I2C1_Init, funcdef_no=136, decl_uid=7909, cgraph_uid=141, symbol_order=146)
+
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, MODIFIED, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 114)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":182:18 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 115)
+        (const_int 1073763328 [0x40005400])) "../Core/Src/main.c":182:18 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 7 6 8 2 (set (mem/f/c:SI (reg/f:SI 114) [5 hi2c1.Instance+0 S4 A32])
+        (reg:SI 115)) "../Core/Src/main.c":182:18 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg/f:SI 116)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":183:25 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 117)
+        (const_int 100000 [0x186a0])) "../Core/Src/main.c":183:25 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (mem/c:SI (plus:SI (reg/f:SI 116)
+                (const_int 4 [0x4])) [2 hi2c1.Init.ClockSpeed+0 S4 A32])
+        (reg:SI 117)) "../Core/Src/main.c":183:25 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 118)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":184:24 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 119)
+        (const_int 0 [0])) "../Core/Src/main.c":184:24 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (mem/c:SI (plus:SI (reg/f:SI 118)
+                (const_int 8 [0x8])) [2 hi2c1.Init.DutyCycle+0 S4 A32])
+        (reg:SI 119)) "../Core/Src/main.c":184:24 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 13 15 2 (set (reg/f:SI 120)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":185:26 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 121)
+        (const_int 0 [0])) "../Core/Src/main.c":185:26 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 17 2 (set (mem/c:SI (plus:SI (reg/f:SI 120)
+                (const_int 12 [0xc])) [2 hi2c1.Init.OwnAddress1+0 S4 A32])
+        (reg:SI 121)) "../Core/Src/main.c":185:26 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 17 16 18 2 (set (reg/f:SI 122)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":186:29 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 123)
+        (const_int 16384 [0x4000])) "../Core/Src/main.c":186:29 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 20 2 (set (mem/c:SI (plus:SI (reg/f:SI 122)
+                (const_int 16 [0x10])) [2 hi2c1.Init.AddressingMode+0 S4 A32])
+        (reg:SI 123)) "../Core/Src/main.c":186:29 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 20 19 21 2 (set (reg/f:SI 124)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":187:30 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 125)
+        (const_int 0 [0])) "../Core/Src/main.c":187:30 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 2 (set (mem/c:SI (plus:SI (reg/f:SI 124)
+                (const_int 20 [0x14])) [2 hi2c1.Init.DualAddressMode+0 S4 A32])
+        (reg:SI 125)) "../Core/Src/main.c":187:30 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 2 (set (reg/f:SI 126)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":188:26 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 127)
+        (const_int 0 [0])) "../Core/Src/main.c":188:26 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 25 24 26 2 (set (mem/c:SI (plus:SI (reg/f:SI 126)
+                (const_int 24 [0x18])) [2 hi2c1.Init.OwnAddress2+0 S4 A32])
+        (reg:SI 127)) "../Core/Src/main.c":188:26 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 26 25 27 2 (set (reg/f:SI 128)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":189:30 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 27 26 28 2 (set (reg:SI 129)
+        (const_int 0 [0])) "../Core/Src/main.c":189:30 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 28 27 29 2 (set (mem/c:SI (plus:SI (reg/f:SI 128)
+                (const_int 28 [0x1c])) [2 hi2c1.Init.GeneralCallMode+0 S4 A32])
+        (reg:SI 129)) "../Core/Src/main.c":189:30 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 29 28 30 2 (set (reg/f:SI 130)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":190:28 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 131)
+        (const_int 0 [0])) "../Core/Src/main.c":190:28 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 31 30 32 2 (set (mem/c:SI (plus:SI (reg/f:SI 130)
+                (const_int 32 [0x20])) [2 hi2c1.Init.NoStretchMode+0 S4 A32])
+        (reg:SI 131)) "../Core/Src/main.c":190:28 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 2 (set (reg:SI 0 r0)
+        (symbol_ref:SI ("hi2c1") [flags 0x2]  <var_decl 0000000006852870 hi2c1>)) "../Core/Src/main.c":191:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 33 32 34 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_I2C_Init") [flags 0x41]  <function_decl 0000000006843700 HAL_I2C_Init>) [0 HAL_I2C_Init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":191:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 34 33 35 2 (set (reg:SI 132)
+        (reg:SI 0 r0)) "../Core/Src/main.c":191:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 35 34 36 2 (set (reg:SI 113 [ _1 ])
+        (reg:SI 132)) "../Core/Src/main.c":191:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 36 35 37 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 113 [ _1 ])
+            (const_int 0 [0]))) "../Core/Src/main.c":191:6 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 37 36 38 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 42)
+            (pc))) "../Core/Src/main.c":191:6 273 {arm_cond_branch}
+     (nil)
+ -> 42)
+;;  succ:       3 (FALLTHRU)
+;;              4 ../Core/Src/main.c:199:1
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2 (FALLTHRU)
+(note 38 37 39 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(call_insn 39 38 42 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("Error_Handler") [flags 0x3]  <function_decl 00000000068d2100 Error_Handler>) [0 Error_Handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":193:5 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+;;  succ:       4 (FALLTHRU) ../Core/Src/main.c:199:1
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       3 (FALLTHRU) ../Core/Src/main.c:199:1
+;;              2 ../Core/Src/main.c:199:1
+(code_label 42 39 43 4 13 (nil) [1 uses])
+(note 43 42 0 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function MX_USART1_UART_Init (MX_USART1_UART_Init, funcdef_no=137, decl_uid=7911, cgraph_uid=142, symbol_order=147)
+
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, MODIFIED, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 114)
+        (symbol_ref:SI ("huart1") [flags 0x2]  <var_decl 0000000006852900 huart1>)) "../Core/Src/main.c":216:19 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 115)
+        (const_int 1073811456 [0x40011000])) "../Core/Src/main.c":216:19 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 7 6 8 2 (set (mem/f/c:SI (reg/f:SI 114) [11 huart1.Instance+0 S4 A32])
+        (reg:SI 115)) "../Core/Src/main.c":216:19 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg/f:SI 116)
+        (symbol_ref:SI ("huart1") [flags 0x2]  <var_decl 0000000006852900 huart1>)) "../Core/Src/main.c":217:24 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 117)
+        (const_int 115200 [0x1c200])) "../Core/Src/main.c":217:24 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (mem/c:SI (plus:SI (reg/f:SI 116)
+                (const_int 4 [0x4])) [2 huart1.Init.BaudRate+0 S4 A32])
+        (reg:SI 117)) "../Core/Src/main.c":217:24 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 118)
+        (symbol_ref:SI ("huart1") [flags 0x2]  <var_decl 0000000006852900 huart1>)) "../Core/Src/main.c":218:26 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 119)
+        (const_int 0 [0])) "../Core/Src/main.c":218:26 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (mem/c:SI (plus:SI (reg/f:SI 118)
+                (const_int 8 [0x8])) [2 huart1.Init.WordLength+0 S4 A32])
+        (reg:SI 119)) "../Core/Src/main.c":218:26 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 13 15 2 (set (reg/f:SI 120)
+        (symbol_ref:SI ("huart1") [flags 0x2]  <var_decl 0000000006852900 huart1>)) "../Core/Src/main.c":219:24 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 121)
+        (const_int 0 [0])) "../Core/Src/main.c":219:24 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 17 2 (set (mem/c:SI (plus:SI (reg/f:SI 120)
+                (const_int 12 [0xc])) [2 huart1.Init.StopBits+0 S4 A32])
+        (reg:SI 121)) "../Core/Src/main.c":219:24 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 17 16 18 2 (set (reg/f:SI 122)
+        (symbol_ref:SI ("huart1") [flags 0x2]  <var_decl 0000000006852900 huart1>)) "../Core/Src/main.c":220:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 123)
+        (const_int 0 [0])) "../Core/Src/main.c":220:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 20 2 (set (mem/c:SI (plus:SI (reg/f:SI 122)
+                (const_int 16 [0x10])) [2 huart1.Init.Parity+0 S4 A32])
+        (reg:SI 123)) "../Core/Src/main.c":220:22 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 20 19 21 2 (set (reg/f:SI 124)
+        (symbol_ref:SI ("huart1") [flags 0x2]  <var_decl 0000000006852900 huart1>)) "../Core/Src/main.c":221:20 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 125)
+        (const_int 12 [0xc])) "../Core/Src/main.c":221:20 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 2 (set (mem/c:SI (plus:SI (reg/f:SI 124)
+                (const_int 20 [0x14])) [2 huart1.Init.Mode+0 S4 A32])
+        (reg:SI 125)) "../Core/Src/main.c":221:20 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 2 (set (reg/f:SI 126)
+        (symbol_ref:SI ("huart1") [flags 0x2]  <var_decl 0000000006852900 huart1>)) "../Core/Src/main.c":222:25 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 127)
+        (const_int 0 [0])) "../Core/Src/main.c":222:25 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 25 24 26 2 (set (mem/c:SI (plus:SI (reg/f:SI 126)
+                (const_int 24 [0x18])) [2 huart1.Init.HwFlowCtl+0 S4 A32])
+        (reg:SI 127)) "../Core/Src/main.c":222:25 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 26 25 27 2 (set (reg/f:SI 128)
+        (symbol_ref:SI ("huart1") [flags 0x2]  <var_decl 0000000006852900 huart1>)) "../Core/Src/main.c":223:28 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 27 26 28 2 (set (reg:SI 129)
+        (const_int 0 [0])) "../Core/Src/main.c":223:28 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 28 27 29 2 (set (mem/c:SI (plus:SI (reg/f:SI 128)
+                (const_int 28 [0x1c])) [2 huart1.Init.OverSampling+0 S4 A32])
+        (reg:SI 129)) "../Core/Src/main.c":223:28 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 29 28 30 2 (set (reg:SI 0 r0)
+        (symbol_ref:SI ("huart1") [flags 0x2]  <var_decl 0000000006852900 huart1>)) "../Core/Src/main.c":224:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 30 29 31 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_UART_Init") [flags 0x41]  <function_decl 000000000689ef00 HAL_UART_Init>) [0 HAL_UART_Init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":224:7 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 31 30 32 2 (set (reg:SI 130)
+        (reg:SI 0 r0)) "../Core/Src/main.c":224:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 2 (set (reg:SI 113 [ _1 ])
+        (reg:SI 130)) "../Core/Src/main.c":224:7 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 33 32 34 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 113 [ _1 ])
+            (const_int 0 [0]))) "../Core/Src/main.c":224:6 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 34 33 35 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 39)
+            (pc))) "../Core/Src/main.c":224:6 273 {arm_cond_branch}
+     (nil)
+ -> 39)
+;;  succ:       3 (FALLTHRU)
+;;              4 ../Core/Src/main.c:232:1
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2 (FALLTHRU)
+(note 35 34 36 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(call_insn 36 35 39 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("Error_Handler") [flags 0x3]  <function_decl 00000000068d2100 Error_Handler>) [0 Error_Handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/main.c":226:5 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+;;  succ:       4 (FALLTHRU) ../Core/Src/main.c:232:1
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       3 (FALLTHRU) ../Core/Src/main.c:232:1
+;;              2 ../Core/Src/main.c:232:1
+(code_label 39 36 40 4 18 (nil) [1 uses])
+(note 40 39 0 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function MX_GPIO_Init (MX_GPIO_Init, funcdef_no=138, decl_uid=7907, cgraph_uid=143, symbol_order=148)
+
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 129)
+        (const_int 0 [0])) "../Core/Src/main.c":245:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 7 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [2 tmpreg+0 S4 A32])
+        (reg:SI 129)) "../Core/Src/main.c":245:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 113 [ _1 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/main.c":245:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 114 [ _2 ])
+        (mem/v:SI (plus:SI (reg/f:SI 113 [ _1 ])
+                (const_int 48 [0x30])) [2 _1->AHB1ENR+0 S4 A32])) "../Core/Src/main.c":245:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 115 [ _3 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/main.c":245:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 116 [ _4 ])
+        (ior:SI (reg:SI 114 [ _2 ])
+            (const_int 1 [0x1]))) "../Core/Src/main.c":245:3 106 {*iorsi3_insn}
+     (nil))
+(insn 11 10 12 2 (set (mem/v:SI (plus:SI (reg/f:SI 115 [ _3 ])
+                (const_int 48 [0x30])) [2 _3->AHB1ENR+0 S4 A32])
+        (reg:SI 116 [ _4 ])) "../Core/Src/main.c":245:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 117 [ _5 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/main.c":245:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 118 [ _6 ])
+        (mem/v:SI (plus:SI (reg/f:SI 117 [ _5 ])
+                (const_int 48 [0x30])) [2 _5->AHB1ENR+0 S4 A32])) "../Core/Src/main.c":245:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 119 [ _7 ])
+        (and:SI (reg:SI 118 [ _6 ])
+            (const_int 1 [0x1]))) "../Core/Src/main.c":245:3 90 {*arm_andsi3_insn}
+     (nil))
+(insn 15 14 16 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [2 tmpreg+0 S4 A32])
+        (reg:SI 119 [ _7 ])) "../Core/Src/main.c":245:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 127 [ vol.2_19 ])
+        (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -4 [0xfffffffffffffffc])) [2 tmpreg+0 S4 A32])) "../Core/Src/main.c":245:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 130)
+        (const_int 0 [0])) "../Core/Src/main.c":246:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -8 [0xfffffffffffffff8])) [2 tmpreg+0 S4 A64])
+        (reg:SI 130)) "../Core/Src/main.c":246:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 20 2 (set (reg/f:SI 120 [ _8 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/main.c":246:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 121 [ _9 ])
+        (mem/v:SI (plus:SI (reg/f:SI 120 [ _8 ])
+                (const_int 48 [0x30])) [2 _8->AHB1ENR+0 S4 A32])) "../Core/Src/main.c":246:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 21 20 22 2 (set (reg/f:SI 122 [ _10 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/main.c":246:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 123 [ _11 ])
+        (ior:SI (reg:SI 121 [ _9 ])
+            (const_int 2 [0x2]))) "../Core/Src/main.c":246:3 106 {*iorsi3_insn}
+     (nil))
+(insn 23 22 24 2 (set (mem/v:SI (plus:SI (reg/f:SI 122 [ _10 ])
+                (const_int 48 [0x30])) [2 _10->AHB1ENR+0 S4 A32])
+        (reg:SI 123 [ _11 ])) "../Core/Src/main.c":246:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 24 23 25 2 (set (reg/f:SI 124 [ _12 ])
+        (const_int 1073887232 [0x40023800])) "../Core/Src/main.c":246:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 25 24 26 2 (set (reg:SI 125 [ _13 ])
+        (mem/v:SI (plus:SI (reg/f:SI 124 [ _12 ])
+                (const_int 48 [0x30])) [2 _12->AHB1ENR+0 S4 A32])) "../Core/Src/main.c":246:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 126 [ _14 ])
+        (and:SI (reg:SI 125 [ _13 ])
+            (const_int 2 [0x2]))) "../Core/Src/main.c":246:3 90 {*arm_andsi3_insn}
+     (nil))
+(insn 27 26 28 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -8 [0xfffffffffffffff8])) [2 tmpreg+0 S4 A64])
+        (reg:SI 126 [ _14 ])) "../Core/Src/main.c":246:3 749 {*thumb2_movsi_vfp}
+     (nil))
+(insn 28 27 0 2 (set (reg:SI 128 [ vol.3_23 ])
+        (mem/v/c:SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -8 [0xfffffffffffffff8])) [2 tmpreg+0 S4 A64])) "../Core/Src/main.c":246:3 749 {*thumb2_movsi_vfp}
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU) ../Core/Src/main.c:250:1
+
+
+;; Function Error_Handler (Error_Handler, funcdef_no=139, decl_uid=7897, cgraph_uid=144, symbol_order=149)
+
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 14 2 (parallel [
+            (asm_operands/v ("cpsid i") ("") 0 []
+                 []
+                 [] ../Drivers/CMSIS/Include/cmsis_gcc.h:962)
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "../Drivers/CMSIS/Include/cmsis_gcc.h":962:3 -1
+     (nil))
+(insn 14 5 9 2 (const_int 0 [0]) "../Drivers/CMSIS/Include/cmsis_gcc.h":963:1 313 {nop}
+     (nil))
+;;  succ:       3 (FALLTHRU)
+
+;; basic block 3, loop depth 1, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       2 (FALLTHRU)
+;;              4 [always]  (FALLTHRU)
+(code_label 9 14 7 3 27 (nil) [0 uses])
+(note 7 9 8 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       4 (FALLTHRU) ../Core/Src/main.c:265:9
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 3, next block 1, flags: (NEW, REACHABLE, RTL, VISITED)
+;;  pred:       3 (FALLTHRU) ../Core/Src/main.c:265:9
+(note 8 7 0 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       3 [always]  (FALLTHRU)
+

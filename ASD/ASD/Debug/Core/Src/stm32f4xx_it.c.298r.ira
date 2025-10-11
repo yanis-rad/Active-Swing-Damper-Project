@@ -1,0 +1,872 @@
+
+;; Function NMI_Handler (NMI_Handler, funcdef_no=134, decl_uid=7899, cgraph_uid=139, symbol_order=138)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 6 n_edges 5 count 6 (    1)
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 5 4
+;;
+;; Loop 1
+;;  header 3, latch 4
+;;  depth 1, outer 0
+;;  nodes: 3 4 5
+;; 2 succs { 3 }
+;; 3 succs { 5 }
+;; 5 succs { 4 }
+;; 4 succs { 3 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+
+
+   Insn 12(l0): point = 1
+   Insn 15(l0): point = 4
+Compressing live ranges: from 8 to 0 - 0%
+Ranges after the compression:
+  regions=1, blocks=6, points=0
+    allocnos=0 (big 0), copies=0, conflicts=0, ranges=0
+Disposition:
++++Costs: overall 0, reg 0, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+NMI_Handler
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 7 [r7]
+;;  ref usage 	r0={1d} r1={1d} r2={1d} r3={1d} r7={1d,5u} r13={1d,5u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,5u} r103={1d,4u} 
+;;    total ref usage 44{25d,19u,0e} in 2{2 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 5, flags: (RTL)
+;;  pred:       2 [always]  (FALLTHRU)
+;;              4 [always] 
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(code_label 7 2 5 3 2 (nil) [1 uses])
+(note 5 7 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       5 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:75:10
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 3, next block 4, flags: (RTL)
+;;  pred:       3 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:75:10
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 14 5 15 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 6 5 (const_int 0 [0]) "../Core/Src/stm32f4xx_it.c":75:10 313 {nop}
+     (nil))
+;;  succ:       4 [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 5, next block 1, flags: (RTL)
+;;  pred:       5 [always]  (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 6 15 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 12 6 13 4 (set (pc)
+        (label_ref 7)) 284 {*arm_jump}
+     (nil)
+ -> 7)
+;;  succ:       3 [always] 
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+(barrier 13 12 0)
+
+;; Function HardFault_Handler (HardFault_Handler, funcdef_no=135, decl_uid=7901, cgraph_uid=140, symbol_order=139)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 6 n_edges 5 count 6 (    1)
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 5 4
+;;
+;; Loop 1
+;;  header 3, latch 4
+;;  depth 1, outer 0
+;;  nodes: 3 4 5
+;; 2 succs { 3 }
+;; 3 succs { 5 }
+;; 5 succs { 4 }
+;; 4 succs { 3 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+
+
+   Insn 12(l0): point = 1
+   Insn 15(l0): point = 4
+Compressing live ranges: from 8 to 0 - 0%
+Ranges after the compression:
+  regions=1, blocks=6, points=0
+    allocnos=0 (big 0), copies=0, conflicts=0, ranges=0
+Disposition:
++++Costs: overall 0, reg 0, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+HardFault_Handler
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 7 [r7]
+;;  ref usage 	r0={1d} r1={1d} r2={1d} r3={1d} r7={1d,5u} r13={1d,5u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,5u} r103={1d,4u} 
+;;    total ref usage 44{25d,19u,0e} in 2{2 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 5, flags: (RTL)
+;;  pred:       2 [always]  (FALLTHRU)
+;;              4 [always] 
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(code_label 7 2 5 3 4 (nil) [1 uses])
+(note 5 7 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       5 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:89:9
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 3, next block 4, flags: (RTL)
+;;  pred:       3 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:89:9
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 14 5 15 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 6 5 (const_int 0 [0]) "../Core/Src/stm32f4xx_it.c":89:9 313 {nop}
+     (nil))
+;;  succ:       4 [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 5, next block 1, flags: (RTL)
+;;  pred:       5 [always]  (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 6 15 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 12 6 13 4 (set (pc)
+        (label_ref 7)) 284 {*arm_jump}
+     (nil)
+ -> 7)
+;;  succ:       3 [always] 
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+(barrier 13 12 0)
+
+;; Function MemManage_Handler (MemManage_Handler, funcdef_no=136, decl_uid=7903, cgraph_uid=141, symbol_order=140)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 6 n_edges 5 count 6 (    1)
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 5 4
+;;
+;; Loop 1
+;;  header 3, latch 4
+;;  depth 1, outer 0
+;;  nodes: 3 4 5
+;; 2 succs { 3 }
+;; 3 succs { 5 }
+;; 5 succs { 4 }
+;; 4 succs { 3 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+
+
+   Insn 12(l0): point = 1
+   Insn 15(l0): point = 4
+Compressing live ranges: from 8 to 0 - 0%
+Ranges after the compression:
+  regions=1, blocks=6, points=0
+    allocnos=0 (big 0), copies=0, conflicts=0, ranges=0
+Disposition:
++++Costs: overall 0, reg 0, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+MemManage_Handler
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 7 [r7]
+;;  ref usage 	r0={1d} r1={1d} r2={1d} r3={1d} r7={1d,5u} r13={1d,5u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,5u} r103={1d,4u} 
+;;    total ref usage 44{25d,19u,0e} in 2{2 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 5, flags: (RTL)
+;;  pred:       2 [always]  (FALLTHRU)
+;;              4 [always] 
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(code_label 7 2 5 3 6 (nil) [1 uses])
+(note 5 7 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       5 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:104:9
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 3, next block 4, flags: (RTL)
+;;  pred:       3 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:104:9
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 14 5 15 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 6 5 (const_int 0 [0]) "../Core/Src/stm32f4xx_it.c":104:9 313 {nop}
+     (nil))
+;;  succ:       4 [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 5, next block 1, flags: (RTL)
+;;  pred:       5 [always]  (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 6 15 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 12 6 13 4 (set (pc)
+        (label_ref 7)) 284 {*arm_jump}
+     (nil)
+ -> 7)
+;;  succ:       3 [always] 
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+(barrier 13 12 0)
+
+;; Function BusFault_Handler (BusFault_Handler, funcdef_no=137, decl_uid=7905, cgraph_uid=142, symbol_order=141)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 6 n_edges 5 count 6 (    1)
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 5 4
+;;
+;; Loop 1
+;;  header 3, latch 4
+;;  depth 1, outer 0
+;;  nodes: 3 4 5
+;; 2 succs { 3 }
+;; 3 succs { 5 }
+;; 5 succs { 4 }
+;; 4 succs { 3 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+
+
+   Insn 12(l0): point = 1
+   Insn 15(l0): point = 4
+Compressing live ranges: from 8 to 0 - 0%
+Ranges after the compression:
+  regions=1, blocks=6, points=0
+    allocnos=0 (big 0), copies=0, conflicts=0, ranges=0
+Disposition:
++++Costs: overall 0, reg 0, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+BusFault_Handler
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 7 [r7]
+;;  ref usage 	r0={1d} r1={1d} r2={1d} r3={1d} r7={1d,5u} r13={1d,5u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,5u} r103={1d,4u} 
+;;    total ref usage 44{25d,19u,0e} in 2{2 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 5, flags: (RTL)
+;;  pred:       2 [always]  (FALLTHRU)
+;;              4 [always] 
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(code_label 7 2 5 3 8 (nil) [1 uses])
+(note 5 7 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       5 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:119:9
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 3, next block 4, flags: (RTL)
+;;  pred:       3 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:119:9
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 14 5 15 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 6 5 (const_int 0 [0]) "../Core/Src/stm32f4xx_it.c":119:9 313 {nop}
+     (nil))
+;;  succ:       4 [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 5, next block 1, flags: (RTL)
+;;  pred:       5 [always]  (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 6 15 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 12 6 13 4 (set (pc)
+        (label_ref 7)) 284 {*arm_jump}
+     (nil)
+ -> 7)
+;;  succ:       3 [always] 
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+(barrier 13 12 0)
+
+;; Function UsageFault_Handler (UsageFault_Handler, funcdef_no=138, decl_uid=7907, cgraph_uid=143, symbol_order=142)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 6 n_edges 5 count 6 (    1)
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 5 4
+;;
+;; Loop 1
+;;  header 3, latch 4
+;;  depth 1, outer 0
+;;  nodes: 3 4 5
+;; 2 succs { 3 }
+;; 3 succs { 5 }
+;; 5 succs { 4 }
+;; 4 succs { 3 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+
+
+   Insn 12(l0): point = 1
+   Insn 15(l0): point = 4
+Compressing live ranges: from 8 to 0 - 0%
+Ranges after the compression:
+  regions=1, blocks=6, points=0
+    allocnos=0 (big 0), copies=0, conflicts=0, ranges=0
+Disposition:
++++Costs: overall 0, reg 0, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+UsageFault_Handler
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 7 [r7]
+;;  ref usage 	r0={1d} r1={1d} r2={1d} r3={1d} r7={1d,5u} r13={1d,5u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,5u} r103={1d,4u} 
+;;    total ref usage 44{25d,19u,0e} in 2{2 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 5, flags: (RTL)
+;;  pred:       2 [always]  (FALLTHRU)
+;;              4 [always] 
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(code_label 7 2 5 3 10 (nil) [1 uses])
+(note 5 7 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       5 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:134:9
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 3, next block 4, flags: (RTL)
+;;  pred:       3 (FALLTHRU) ../Core/Src/stm32f4xx_it.c:134:9
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 14 5 15 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 6 5 (const_int 0 [0]) "../Core/Src/stm32f4xx_it.c":134:9 313 {nop}
+     (nil))
+;;  succ:       4 [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 5, next block 1, flags: (RTL)
+;;  pred:       5 [always]  (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 6 15 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 12 6 13 4 (set (pc)
+        (label_ref 7)) 284 {*arm_jump}
+     (nil)
+ -> 7)
+;;  succ:       3 [always] 
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+(barrier 13 12 0)
+
+;; Function SVC_Handler (SVC_Handler, funcdef_no=139, decl_uid=7909, cgraph_uid=144, symbol_order=143)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 4 n_edges 3 count 4 (    1)
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3
+;; 2 succs { 3 }
+;; 3 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+
+
+   Insn 8(l0): point = 0
+Compressing live ranges: from 4 to 0 - 0%
+Ranges after the compression:
+  regions=1, blocks=4, points=0
+    allocnos=0 (big 0), copies=0, conflicts=0, ranges=0
+Disposition:
++++Costs: overall 0, reg 0, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+SVC_Handler
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 7 [r7]
+;;  ref usage 	r0={1d} r1={1d} r2={1d} r3={1d} r7={1d,3u} r13={1d,3u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,3u} r103={1d,2u} 
+;;    total ref usage 36{25d,11u,0e} in 1{1 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:152:1
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 1, flags: (RTL)
+;;  pred:       2 [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:152:1
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 7 2 8 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 8 7 0 3 (const_int 0 [0]) "../Core/Src/stm32f4xx_it.c":152:1 313 {nop}
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+
+;; Function DebugMon_Handler (DebugMon_Handler, funcdef_no=140, decl_uid=7911, cgraph_uid=145, symbol_order=144)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 4 n_edges 3 count 4 (    1)
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3
+;; 2 succs { 3 }
+;; 3 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+
+
+   Insn 8(l0): point = 0
+Compressing live ranges: from 4 to 0 - 0%
+Ranges after the compression:
+  regions=1, blocks=4, points=0
+    allocnos=0 (big 0), copies=0, conflicts=0, ranges=0
+Disposition:
++++Costs: overall 0, reg 0, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+DebugMon_Handler
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 7 [r7]
+;;  ref usage 	r0={1d} r1={1d} r2={1d} r3={1d} r7={1d,3u} r13={1d,3u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,3u} r103={1d,2u} 
+;;    total ref usage 36{25d,11u,0e} in 1{1 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:165:1
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 1, flags: (RTL)
+;;  pred:       2 [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:165:1
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 7 2 8 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 8 7 0 3 (const_int 0 [0]) "../Core/Src/stm32f4xx_it.c":165:1 313 {nop}
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+
+;; Function PendSV_Handler (PendSV_Handler, funcdef_no=141, decl_uid=7913, cgraph_uid=146, symbol_order=145)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 4 n_edges 3 count 4 (    1)
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3
+;; 2 succs { 3 }
+;; 3 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+
+
+   Insn 8(l0): point = 0
+Compressing live ranges: from 4 to 0 - 0%
+Ranges after the compression:
+  regions=1, blocks=4, points=0
+    allocnos=0 (big 0), copies=0, conflicts=0, ranges=0
+Disposition:
++++Costs: overall 0, reg 0, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+PendSV_Handler
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 7 [r7]
+;;  ref usage 	r0={1d} r1={1d} r2={1d} r3={1d} r7={1d,3u} r13={1d,3u} r14={1d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r102={1d,3u} r103={1d,2u} 
+;;    total ref usage 36{25d,11u,0e} in 1{1 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+;;  succ:       3 [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:178:1
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 1, flags: (RTL)
+;;  pred:       2 [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:178:1
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 7 2 8 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 8 7 0 3 (const_int 0 [0]) "../Core/Src/stm32f4xx_it.c":178:1 313 {nop}
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+
+;; Function SysTick_Handler (SysTick_Handler, funcdef_no=142, decl_uid=7915, cgraph_uid=147, symbol_order=146)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 4 n_edges 3 count 4 (    1)
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3
+;; 2 succs { 3 }
+;; 3 succs { 1 }
+Building IRA IR
+verify found no changes in insn with uid = 5.
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+
+
+   Insn 9(l0): point = 0
+   Insn 5(l0): point = 3
+Compressing live ranges: from 6 to 0 - 0%
+Ranges after the compression:
+  regions=1, blocks=4, points=0
+    allocnos=0 (big 0), copies=0, conflicts=0, ranges=0
+Disposition:
++++Costs: overall 0, reg 0, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+SysTick_Handler
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 7 [r7] 13 [sp] 102 [sfp]
+;;  regs ever live 	 7 [r7] 12 [ip] 13 [sp] 14 [lr]
+;;  ref usage 	r0={2d} r1={2d} r2={2d} r3={2d} r7={1d,3u} r12={2d} r13={1d,4u} r14={2d} r15={1d} r16={2d} r17={2d} r18={2d} r19={2d} r20={2d} r21={2d} r22={2d} r23={2d} r24={2d} r25={2d} r26={2d} r27={2d} r28={2d} r29={2d} r30={2d} r31={2d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} r81={1d} r82={1d} r83={1d} r84={1d} r85={1d} r86={1d} r87={1d} r88={1d} r89={1d} r90={1d} r91={1d} r92={1d} r93={1d} r94={1d} r95={1d} r96={1d} r97={1d} r98={1d} r99={1d} r100={1d} r101={1d} r102={1d,3u} r103={1d,2u} r104={1d} r105={1d} r106={1d} 
+;;    total ref usage 118{106d,12u,0e} in 2{1 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(call_insn 5 2 8 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("HAL_IncTick") [flags 0x41]  <function_decl 0000000006909b00 HAL_IncTick>) [0 HAL_IncTick S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Core/Src/stm32f4xx_it.c":188:3 290 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+;;  succ:       3 [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:192:1
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 1, flags: (RTL)
+;;  pred:       2 [always]  (FALLTHRU) ../Core/Src/stm32f4xx_it.c:192:1
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(7){ }u-1(13){ }u-1(102){ }u-1(103){ }}
+;; lr  in  	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	
+(note 8 5 9 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 9 8 0 3 (const_int 0 [0]) "../Core/Src/stm32f4xx_it.c":192:1 313 {nop}
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+
