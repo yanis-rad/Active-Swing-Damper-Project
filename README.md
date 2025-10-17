@@ -1,8 +1,79 @@
+# Active Swing Damper Control Software
 
-# Active-Swing-Damper-Project
-Repository of the Active Swing Damper software
+This repository contains the source code for the **Active Swing Damper (ASD)**, a control system designed to actively reduce oscillations 
+in a rocker subjected to external forces. 
+The system uses a PID controller to command a DC motor based on feedback from an IMU and a 
+motor encoder.
 
-The ASD software is mounted on an STM32 microcontroller and is used to dampen the oscillations of a rocker.
+---
+
+## Hardware Components
+
+- STM32F411-CEU6 Black Pill microcontroller  
+- L298N Motor Driver  
+- MPU6050 IMU  
+- MicroSD Reader  
+- Brushless 1000RPM DC Motor with encoder  
+- 2 × LEDs (Green for normal operation, Red for fault indication)  
+- 2 × 4.2V Batteries  
+
+---
+
+## Data Collection
+
+The system measures the following variables during operation:
+- **Angular Speed (Y-axis, IMU):** Used to set the target speed and detect acceleration and deceleration.
+- **Linear Acceleration (X-axis, IMU):** Assists in identifying acceleration and deceleration phases.
+- **Flywheel Speed (Motor Encoder):** Used as feedback in the speed control loop.
+
+---
+
+## State Machine
+
+After initialization ASD operates in two main states, and reaches a third state in case of problems. 
+The three states are: 
+1. **Acceleration State:** accessed by default or when the rocker starts swinging in the opposite direction. 
+   In this state the PID is actively reacting proportionally to the angular velocity of the rocker.
+2. **Deceleration State:** accessed once the rocker reaches a local peak of angular speed and starts to decelerate.
+   In this state the motor enters **braking mode** to stop the flywheel before reversing direction.
+3. **Fault State:** accessed if either the MicroSD reader is reporting problems or the IMU is not exchanging data correctly, 
+   In this state the logic deactivates the motor for safety reasons. 
+
+- During **acceleration**, the target speed is proportional to the angular velocity of the rocker.
+- During **deceleration**, the target speed is set to zero and 
+
+<img width="1041" height="642" alt="Screenshot 2025-10-17 093359" src="https://github.com/user-attachments/assets/39c6467f-ac91-47f8-98a2-d7457c7ca51f" />
+
+---
+
+## Control Logic
+The goal of the control system is to produce a torque in response to the oscillations of the rocker. To do this a speed control loop is implemented using a **PID controller**. The PID logic is active only during the acceleration phase and follows the target speed proportionally to the angular velocity of the rocker. Given the fast dynamics of the system, ASD implements the PID speed controller only with the **P and D terms** the coefficients of which have been tuned appropriately to give a fast and fluid response.
+  
+
+---
+
+## Diagnostics
+The connection statuses of both the IMU and the MicroSD reader are monitored. The state of the operations is shown to the user by using two LEDs:
+- **Green LED** indicates normal operation.
+- **Red LED** signals connection issues.
+
+---
+
+
+## Results
+
+Tests comparing the system with and without the Active Swing Damper show:
+
+- Faster damping of oscillations
+- Lower peak angular speeds and accelerations.
+- Reduced oscillation frequency.
+
+  <img width="1095" height="749" alt="Screenshot 2025-10-12 210849" src="https://github.com/user-attachments/assets/10b12386-d526-42e3-b766-7c5dea72b39e" />
+
+  
+
+
+
 <img width="1095" height="749" alt="Screenshot 2025-10-12 210849" src="https://github.com/user-attachments/assets/a85aaeb2-58ab-42b9-9fa4-9776cc3cdd03" />
 
 Added source code.
