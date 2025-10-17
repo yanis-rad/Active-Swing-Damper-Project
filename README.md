@@ -15,6 +15,7 @@ The system uses a PID controller to command a DC motor based on feedback from an
 - 2 × 4.2V Batteries
 
 First Prototype image:
+
 <img width="675" height="500" alt="image" src="https://github.com/user-attachments/assets/72faa524-e769-49ac-a1d4-7f0d7d16e54a" />
 
 
