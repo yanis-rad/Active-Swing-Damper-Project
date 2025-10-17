@@ -2,7 +2,7 @@
 
 This repository contains the source code for the **Active Swing Damper (ASD)**, a control system designed to actively reduce oscillations 
 in a rocker subjected to external forces. 
-The system uses a PID controller to command a DC motor based on feedback from an IMU and a 
+The system uses a PID controller to command a DC motor based on feedback from an IMU and the 
 motor encoder.
 
 ---
@@ -39,15 +39,16 @@ The three states are:
 3. **Fault State:** accessed if either the MicroSD reader is reporting problems or the IMU is not exchanging data correctly, 
    In this state the logic deactivates the motor for safety reasons. 
 
-- During **acceleration**, the target speed is proportional to the angular velocity of the rocker.
-- During **deceleration**, the target speed is set to zero and 
-
-<img width="1041" height="642" alt="Screenshot 2025-10-17 093359" src="https://github.com/user-attachments/assets/39c6467f-ac91-47f8-98a2-d7457c7ca51f" />
+<img width="520" height="321" alt="Screenshot 2025-10-17 093359" src="https://github.com/user-attachments/assets/39c6467f-ac91-47f8-98a2-d7457c7ca51f" />
 
 ---
 
 ## Control Logic
-The goal of the control system is to produce a torque in response to the oscillations of the rocker. To do this a speed control loop is implemented using a **PID controller**. The PID logic is active only during the acceleration phase and follows the target speed proportionally to the angular velocity of the rocker. Given the fast dynamics of the system, ASD implements the PID speed controller only with the **P and D terms** the coefficients of which have been tuned appropriately to give a fast and fluid response.
+The goal of the control system is to produce a torque in response to the oscillations of the rocker. To do this a speed control loop is implemented using a **PID controller**. The PID logic is active only during the acceleration phase and follows the target speed, the value ow which is assigned as follows:
+- During **acceleration**, the target speed is proportional to the angular velocity of the rocker.
+- During **deceleration**, the target speed is reset to zero.
+
+Given the fast dynamics of the system, ASD implements the PID speed controller only with the **P and D terms** the coefficients of which have been tuned appropriately to give a fast and fluid response.
   
 
 ---
@@ -68,7 +69,7 @@ Tests comparing the system with and without the Active Swing Damper show:
 - Lower peak angular speeds and accelerations.
 - Reduced oscillation frequency.
 
-  <img width="1095" height="749" alt="Screenshot 2025-10-12 210849" src="https://github.com/user-attachments/assets/10b12386-d526-42e3-b766-7c5dea72b39e" />
+  <img width="547" height="325" alt="Screenshot 2025-10-12 210849" src="https://github.com/user-attachments/assets/10b12386-d526-42e3-b766-7c5dea72b39e" />
 
   
 
