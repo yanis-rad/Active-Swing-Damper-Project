@@ -14,7 +14,8 @@ The system uses a PID controller to command a DC motor based on feedback from an
 - 2 × LEDs (Green for normal operation, Red for fault indication)  
 - 2 × 4.2V Batteries
 
-<img width="815" height="487" alt="Screenshot 2025-10-12 210849" src="https//github.com/user-attachments/assets/811fc910-51e1-4b61-918e-feb87d52b4a6" />
+<img width="900" height="667" alt="image" src="https://github.com/user-attachments/assets/72faa524-e769-49ac-a1d4-7f0d7d16e54a" />
+
 
 
 ---
