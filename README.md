@@ -2,8 +2,7 @@
 
 This repository contains the source code for the **Active Swing Damper (ASD)**, a control system designed to actively reduce oscillations 
 in a rocker subjected to external forces. 
-The system uses a PID controller to command a DC motor based on feedback from an IMU and the 
-motor encoder.
+The system uses a PID controller to command a DC motor based on feedback from an IMU and the motor encoder.
 ---
 ## Hardware Components
 
@@ -26,7 +25,7 @@ The system measures the following variables during operation:
 
 After initialization ASD operates in two main states, and reaches a third state in case of problems. 
 The three states are: 
-1. **Acceleration State:** accessed by default or when the rocker starts swinging in the opposite direction. 
+1. **Acceleration State:** accessed by default or when the rocker changes its direction of rotation. 
    In this state the PID is actively reacting proportionally to the angular velocity of the rocker.
 2. **Deceleration State:** accessed once the rocker reaches a local peak of angular speed and starts to decelerate.
    In this state the motor enters braking mode to stop the flywheel before reversing direction.
@@ -44,7 +43,7 @@ The connection statuses of both the IMU and the MicroSD reader are monitored. Th
 ---
 
 ## Control Logic
-The goal of the control system is to produce a torque in response to the oscillations of the rocker. To do this a speed control loop is implemented using a **PID controller**. The PID logic is active only during the acceleration phase and follows the target speed, the value ow which is assigned as follows:
+The goal of the control system is to produce a torque in response to the oscillations of the rocker. To do this a speed control loop is implemented using a **PID controller**. The PID logic is active only during the acceleration phase and follows the target speed that is assigned as follows:
 - During **acceleration**, the target speed is proportional to the angular velocity of the rocker.
 - During **deceleration**, the target speed is reset to zero.
 Given the fast dynamics of the system, ASD implements the PID speed controller only with the **P and D terms** the coefficients of which have been tuned appropriately to give a fast and fluid response.
