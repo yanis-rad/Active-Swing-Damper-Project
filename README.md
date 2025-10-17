@@ -35,8 +35,8 @@ The three states are:
 1. **Acceleration State:** accessed by default or when the rocker starts swinging in the opposite direction. 
    In this state the PID is actively reacting proportionally to the angular velocity of the rocker.
 2. **Deceleration State:** accessed once the rocker reaches a local peak of angular speed and starts to decelerate.
-   In this state the motor enters **braking mode** to stop the flywheel before reversing direction.
-3. **Fault State:** accessed if either the MicroSD reader is reporting problems or the IMU is not exchanging data correctly, 
+   In this state the motor enters braking mode to stop the flywheel before reversing direction.
+3. **Fault State:** accessed if either the MicroSD reader is reporting problems or the IMU is not exchanging data correctly. 
    In this state the logic deactivates the motor for safety reasons. 
 
 <img width="520" height="321" alt="Screenshot 2025-10-17 093359" src="https://github.com/user-attachments/assets/39c6467f-ac91-47f8-98a2-d7457c7ca51f" />
