@@ -12,7 +12,10 @@ The system uses a PID controller to command a DC motor based on feedback from an
 - MicroSD Reader  
 - Brushless 1000RPM DC Motor with encoder  
 - 2 × LEDs (Green for normal operation, Red for fault indication)  
-- 2 × 4.2V Batteries  
+- 2 × 4.2V Batteries
+
+  ![photo_6021390054611604371_y](https://github.com/user-attachments/assets/11065868-0089-410e-abd8-1bf0fb04f000)
+
 ---
 ## Data Collection
 
