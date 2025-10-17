@@ -69,12 +69,5 @@ Tests comparing the system with and without the Active Swing Damper show:
 - Lower peak angular speeds and accelerations.
 - Reduced oscillation frequency.
 
-  <img width="547" height="325" alt="Screenshot 2025-10-12 210849" src="https://github.com/user-attachments/assets/10b12386-d526-42e3-b766-7c5dea72b39e" />
+  <img width="820" height="487" alt="Screenshot 2025-10-12 210849" src="https://github.com/user-attachments/assets/10b12386-d526-42e3-b766-7c5dea72b39e" />
 
-  
-
-
-
-<img width="1095" height="749" alt="Screenshot 2025-10-12 210849" src="https://github.com/user-attachments/assets/a85aaeb2-58ab-42b9-9fa4-9776cc3cdd03" />
-
-Added source code.
