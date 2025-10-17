@@ -52,7 +52,7 @@ Given the fast dynamics of the system, ASD implements the PID speed controller o
 ## Results
 
 Multiple test were performed to asses the performance of ASD. The main test used for comparison consisted in positioning the rocker in the same unstable initial condition and left oscillating with and without the ASD. The collected data showed:
-- Faster return to stability with the rocker arresting 30% faster in a stable position.
+- Faster return to stability with the rocker arresting 30% faster.
 - Peak angular speeds lower by 40% on average.
 - Reduced oscillation frequency by 9% on average.
 - Less overall oscillations before reaching stable position.
