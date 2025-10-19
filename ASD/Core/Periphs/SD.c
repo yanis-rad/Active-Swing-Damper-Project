@@ -1,16 +1,19 @@
-/*
- * SD.c
- *
- *  Created on: Sep 21, 2025
- *      Author: Yanis
- */
-
+/* ============================ */
+/*        Include Files         */
+/* ============================ */
 #include "SD.h"
 
+/* ============================ */
+/*        Local Variables       */
+/* ============================ */
 FATFS FatFs;
 FIL Fil;
 UINT WWC; // Read/Write Word Counter
 char RW_Buffer[200];
+
+/* ============================ */
+/*     Function Definitions     */
+/* ============================ */
 
 /**
  * @brief Initializes the SD card and starts a new sensor data log file.

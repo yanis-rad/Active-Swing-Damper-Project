@@ -1,21 +1,27 @@
-/*
- * IMU.c
- *
- *  Created on: Sep 15, 2025
- *      Author: Yanis
- */
-
+/* ============================ */
+/*        Include Files         */
+/* ============================ */
 #include "main.h"
-#include <math.h>
-#include "string.h"
-#include <stdio.h>
 #include "IMU.h"
+#include <math.h>
+#include <string.h>
+#include <stdio.h>
 
+/* ============================ */
+/*        Global Variables      */
+/* ============================ */
 uint8_t Rec_Data1[6];
 uint8_t Rec_Data2[6];
-I2C_HandleTypeDef hi2c1;
 uint8_t confirm;
 
+/* ============================ */
+/*        I2C Handle            */
+/* ============================ */
+I2C_HandleTypeDef hi2c1;
+
+/* ============================ */
+/*     Function Definitions     */
+/* ============================ */
 
 /**
  * @brief Initializes the MPU6050 sensor and verifies its communication.

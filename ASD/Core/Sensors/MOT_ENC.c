@@ -1,19 +1,20 @@
-/** @file ENC.c
- *  @brief DC motor speed calculator based on encoder data
- *
- *  This file contains the function needed to compute the speed
- *  based on encoder data. The encoder is data is based on a two
- *  out-of-phase output channels
- *
- *  @author Yanislav Radyul
- */
+/* ============================ */
+/*        Include Files         */
+/* ============================ */
+#include "MOT_ENC.h"
 
-#include <MOT_ENC.h>
+/* ============================ */
+/*        Global Variables      */
+/* ============================ */
+float delta_us = 0.0f;
+float delta_s  = 0.0f;
+float delta_revs = 0.0f;
 
-float delta_us;
-float delta_s;
-TIM_HandleTypeDef htim2;
-float delta_revs;
+TIM_HandleTypeDef htim2; /**< Timer handle used for encoder input */
+
+/* ============================ */
+/*     Function Definitions     */
+/* ============================ */
 
 /**
  * @brief Initializes the motor structure to default values.

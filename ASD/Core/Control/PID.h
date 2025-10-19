@@ -1,19 +1,18 @@
-/*
- * PID.h
- *
- *  Created on: Sep 16, 2025
- *      Author: Yanis
- */
-
 #ifndef CONTROL_PID_H_
 #define CONTROL_PID_H_
 
+/* ============================ */
+/*        Include Files         */
+/* ============================ */
 #include <math.h>
 #include <MOT_ENC.h>
 #include "string.h"
 #include <stdio.h>
 #include "IMU.h"
 
+/* ============================ */
+/*        Type Definitions      */
+/* ============================ */
 typedef struct
 {
 	double    Kp;
@@ -27,6 +26,10 @@ typedef struct
 	uint16_t  PWM_max;
 	int16_t   Tgt_spd;
 }PID_t;
+
+/* ============================ */
+/*     Function Declarations    */
+/* ============================ */
 
 /** @brief Initializes PID gains and PWM limits. */
 void PID_Init(PID_t *pid);

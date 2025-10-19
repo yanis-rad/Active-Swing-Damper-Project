@@ -1,34 +1,40 @@
-/*
- * IMU.h
- *
- *  Created on: Sep 15, 2025
- *      Author: Yanis
- */
-#include <math.h>
-#include "string.h"
-#include <stdio.h>
-#include "DSC.h"
-#include <stdlib.h>
-#include "stm32f4xx_hal.h"
-
 #ifndef SENSORS_IMU_H_
 #define SENSORS_IMU_H_
+/* ============================ */
+/*        Include Files         */
+/* ============================ */
+#include "stm32f4xx_hal.h"
+#include "DSC.h"
+#include <math.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
+/* ============================ */
+/*        Type Definitions      */
+/* ============================ */
 typedef struct
 {
-	uint8_t   check;
-	int16_t   Acc_X_raw;
-	int16_t   Omega_Y_raw;
-	int16_t   Acc_X;
-	int16_t   Acc_X_z1;
-    int16_t   Omega_Y;
-    int16_t   Omega_Y_z1;
-}Rocker_IMU_t;
+    uint8_t   check;          /**< Sensor check status byte */
+    int16_t   Acc_X_raw;      /**< Raw accelerometer X-axis data */
+    int16_t   Omega_Y_raw;    /**< Raw gyroscope Y-axis data */
+    int16_t   Acc_X;          /**< Processed accelerometer X-axis value */
+    int16_t   Acc_X_z1;       /**< Previous accelerometer X-axis value */
+    int16_t   Omega_Y;        /**< Processed gyroscope Y-axis value */
+    int16_t   Omega_Y_z1;     /**< Previous gyroscope Y-axis value */
+} Rocker_IMU_t;
 
+/* ============================ */
+/*        Global Variables      */
+/* ============================ */
 extern uint8_t Rec_Data1[6];
 extern uint8_t Rec_Data2[6];
 extern I2C_HandleTypeDef hi2c1;
-#define MPU6050_ADDR         0xD0  // 8-bit I2C address (0x68 << 1)
+
+/* ============================ */
+/*        Macro Definitions     */
+/* ============================ */
+#define MPU6050_ADDR         0xD0  /**< 8-bit I2C address (0x68 << 1) */
 #define WHO_AM_I_REG         0x75
 #define PWR_MGMT_1_REG       0x6B
 #define SMPLRT_DIV_REG       0x19
@@ -36,6 +42,10 @@ extern I2C_HandleTypeDef hi2c1;
 #define ACCEL_CONFIG_REG     0x1C
 #define GYRO_YOUT_H_REG      0x45
 #define ACC_X_H_REG          0x3B
+
+/* ============================ */
+/*     Function Declarations    */
+/* ============================ */
 
 /** @brief Computes the PID controller output for motor speed control. */
 void MPU6050_Init(Diag_lst_t *diag_lst);

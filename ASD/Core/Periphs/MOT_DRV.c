@@ -1,14 +1,17 @@
-/*
- * MOT_DRV.c
- *
- *  Created on: Sep 16, 2025
- *      Author: Yanis
- */
-
+/* ============================ */
+/*        Include Files         */
+/* ============================ */
 #include "MOT_DRV.h"
 
+
+/* ============================ */
+/*        TIM1 Handle            */
+/* ============================ */
 TIM_HandleTypeDef htim1;
 
+/* ============================ */
+/*     Function Definitions     */
+/* ============================ */
 
 /**
  * @brief Sets the motor driver pins and PWM output to control motor speed and direction.

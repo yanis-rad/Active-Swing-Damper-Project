@@ -35,15 +35,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  15 .debug_ranges 00001490  00000000  00000000  0002aef0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  0001a96d  00000000  00000000  0002c380  2**0
+ 16 .debug_macro  0001a9a5  00000000  00000000  0002c380  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0001ff46  00000000  00000000  00046ced  2**0
+ 17 .debug_line   0001ff46  00000000  00000000  00046d25  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000954e7  00000000  00000000  00066c33  2**0
+ 18 .debug_str    000954e7  00000000  00000000  00066c6b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000fc11a  2**0
+ 19 .comment      00000043  00000000  00000000  000fc152  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000062bc  00000000  00000000  000fc160  2**2
+ 20 .debug_frame  000062bc  00000000  00000000  000fc198  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1467,10 +1467,10 @@ void SDLog_Write(Motor_t *motor,  PID_t *pid, Diag_lst_t *diag_lst, Rocker_IMU_t
  8000fa0:	20001110 	.word	0x20001110
 
 08000fa4 <Diag_Init>:
-  * @param Diag_lst
+  * @param[out] diag_lst Pointer to a Diag_lst_t structure to be initialized.
+  *
   * @retval None
   */
-
 void Diag_Init(Diag_lst_t *diag_lst)
 {
  8000fa4:	b480      	push	{r7}
@@ -1498,7 +1498,10 @@ void Diag_Init(Diag_lst_t *diag_lst)
 	...
 
 08000fcc <Diag_Check>:
-
+  *                         diagnostic state information and an error flag.
+  *
+  * @retval None
+  */
 void Diag_Check(Diag_lst_t *diag_lst)
 {
  8000fcc:	b580      	push	{r7, lr}
@@ -2098,10 +2101,10 @@ void Motor_Speed_Calc(Motor_t *motor,  float *delta_us,  float *delta_s)
  80013e0:	200022cc 	.word	0x200022cc
  80013e4:	20000000 	.word	0x20000000
  80013e8:	49742400 	.word	0x49742400
- 80013ec:	20002280 	.word	0x20002280
+ 80013ec:	20002284 	.word	0x20002284
  80013f0:	200022d0 	.word	0x200022d0
  80013f4:	42a00000 	.word	0x42a00000
- 80013f8:	200022c8 	.word	0x200022c8
+ 80013f8:	20002280 	.word	0x20002280
  80013fc:	42700000 	.word	0x42700000
 
 08001400 <main>:
@@ -2410,7 +2413,7 @@ static void PeriphConfig_Init(Diag_lst_t *diag_lst)
  800164c:	bd80      	pop	{r7, pc}
  800164e:	bf00      	nop
  8001650:	20002220 	.word	0x20002220
- 8001654:	20002280 	.word	0x20002280
+ 8001654:	20002284 	.word	0x20002284
  8001658:	20000090 	.word	0x20000090
 
 0800165c <SysClock_Init>:
@@ -3139,7 +3142,7 @@ static void MX_TIM2_Init(void)
  8001ad2:	46bd      	mov	sp, r7
  8001ad4:	bd80      	pop	{r7, pc}
  8001ad6:	bf00      	nop
- 8001ad8:	20002280 	.word	0x20002280
+ 8001ad8:	20002284 	.word	0x20002284
 
 08001adc <MX_USART1_UART_Init>:
 

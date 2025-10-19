@@ -1,22 +1,26 @@
-/*
- * LOG_SD.h
- *
- *  Created on: Sep 21, 2025
- *      Author: Yanis
- */
-
 #ifndef PERIPHS_SD_H_
 #define PERIPHS_SD_H_
 
+
+/* ============================ */
+/*        Include Files         */
+/* ============================ */
 #include <MOT_ENC.h>
 #include "fatfs.h"
 #include "DSC.h"
 #include "PID.h"
 
+/* ============================ */
+/*        Global Variables      */
+/* ============================ */
 extern FATFS FatFs;
 extern FIL Fil;
 extern UINT WWC; // Read/Write Word Counter
 extern char RW_Buffer[200];
+
+/* ============================ */
+/*     Function Declarations    */
+/* ============================ */
 
 /** @brief Initializes the SD card and starts a new sensor data log file. */
 void SDLog_Startup(void);

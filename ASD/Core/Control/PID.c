@@ -1,14 +1,14 @@
-/*
- * PID.c
- *
- *  Created on: Sep 16, 2025
- *      Author: Yanis
- */
-
+/* ============================ */
+/*        Include Files         */
+/* ============================ */
 #include <MOT_ENC.h>
 #include <stdio.h>
 #include "IMU.h"
 #include "PID.h"
+
+/* ============================ */
+/*     Function Definitions     */
+/* ============================ */
 
 /**
  * @brief Initializes the PID controller parameters and output limits.

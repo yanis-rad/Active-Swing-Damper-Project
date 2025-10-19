@@ -1,13 +1,12 @@
-/*
- * DSC.c
- *
- *  Created on: Sep 15, 2025
- *      Author: Yanis
- */
-//* Includes ------------------------------------------------------------------*/
+/* ============================ */
+/*        Include Files         */
+/* ============================ */
 #include "DSC.h"
 #include "string.h"
 
+/* ============================ */
+/*     Function Definitions     */
+/* ============================ */
 
 /**
   * @brief  Initializes the diagnostic status structure.
