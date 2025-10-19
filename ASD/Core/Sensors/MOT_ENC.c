@@ -86,11 +86,10 @@ void Motor_Speed_Calc(Motor_t *motor,  float *delta_us,  float *delta_s)
 
 	motor->Motor_pos = (int32_t)__HAL_TIM_GET_COUNTER(&htim2);
 	delta_pos = (motor->Motor_pos - motor_pos_z1);
-	delta_revs = delta_pos / 80.0f;                      //Ticks per revolution considering two channels
 
 	if (*delta_us > 1.0f)
 	{
-	    motor->Motor_spd_raw = (delta_revs * 60.0f * 1e6f) / *delta_us; // RPM
+	    motor->Motor_spd_raw = (delta_pos * 1e6f) / *delta_us; // RPM
 	}
 	else
 	{
