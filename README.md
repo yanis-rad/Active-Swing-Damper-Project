@@ -55,6 +55,7 @@ The goal of the control system is to produce a torque in response to the oscilla
 - During **deceleration**, the target speed is reset to zero.
 Given the fast dynamics of the system, ASD implements the PID speed controller only with the **P and D terms** the coefficients of which have been tuned appropriately to give a fast and fluid response.
 
+
 <img width="682" height="453" alt="image" src="https://github.com/user-attachments/assets/35cb1a34-933e-4441-97bc-707735823a41" />
 
 
