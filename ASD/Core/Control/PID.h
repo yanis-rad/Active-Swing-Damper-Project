@@ -32,7 +32,7 @@ typedef struct
 void PID_Init(PID_t *pid);
 
 /** @brief Computes the PID controller output for motor speed control. */
-void PID_Control(PID_t *pid, int16_t PID_motor_spd_input, int16_t PID_motor_spd_input_z1);
+void PID_Control(PID_t *pid, int16_t PID_motor_spd_input);
 
 /** @brief Limits the PWM output of a PID controller and applies braking when decelerating. */
 void PID_PWM_Limiter(PID_t *pid, int decel_sts, int aclkwise, int clkwise);

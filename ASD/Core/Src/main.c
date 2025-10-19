@@ -33,6 +33,7 @@ UART_HandleTypeDef huart1;
 char TxBuffer[250];
 int decel_sts;
 int32_t ticks = 0;
+uint32_t time_del;
 int PIN_IN3_STATE;
 int PIN_IN4_STATE;
 
@@ -123,7 +124,7 @@ int main(void)
 		  Motor_Drive_PinState_Set(PID.Tgt_spd, decel_sts, &PIN_IN3_STATE, &PIN_IN4_STATE);
 
 		  // PID control
-		  PID_Control(&PID, Motor.Motor_spd, Motor.Motor_spd_z1);
+		  PID_Control(&PID, Motor.Motor_spd);
 		  PID_PWM_Limiter(&PID, decel_sts, ACLKWISE, CLKWISE);
 
 		  // Set motor speed and direction of motion
@@ -133,13 +134,15 @@ int main(void)
 		  DelayedVals_Update(&Motor,&IMU);
 
 		  // Micro SD data log
-		  Diag_lst.MicroSD_state = SDLog_Write(&Motor, &PID, &IMU, decel_sts, delta_us);
+		  SDLog_Write(&Motor, &PID, &Diag_lst, &IMU, decel_sts, delta_us);
 
 		  // Set 10ms cycle */
 		  if (delta_us < 10000)
 		  {
-			  HAL_Delay(1000-delta_us);
+		      time_del = (uint32_t)(10000 - delta_us);  // microseconds
+		      HAL_Delay(time_del / 1000);               // convert to milliseconds
 		  }
+
   }
 }
 

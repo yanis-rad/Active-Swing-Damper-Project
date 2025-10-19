@@ -22,7 +22,7 @@ extern char RW_Buffer[200];
 void SDLog_Startup(void);
 
 /** @brief Writes sensor and control data to the SD card log file and periodically synchronizes. */
-uint8_t SDLog_Write(Motor_t *motor, PID_t *pid, Rocker_IMU_t *rocker, int decel_sts, float delta_us);
+void SDLog_Write(Motor_t *motor, PID_t *pid, Diag_lst_t *diag_lst, Rocker_IMU_t *rocker, int decel_sts, float delta_us);
 
 
 #endif

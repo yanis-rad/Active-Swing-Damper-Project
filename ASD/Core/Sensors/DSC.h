@@ -21,7 +21,9 @@ typedef struct
 
 }Diag_lst_t;
 
+/** @brief  Initializes the diagnostic status structure. */
 void Diag_Init(Diag_lst_t *diag_lst);
+/** @brief  Performs a diagnostic check on system components and updates error status. */
 void Diag_Check(Diag_lst_t *diag_lst);
 
 #endif /* SRC_DSC_H_ */

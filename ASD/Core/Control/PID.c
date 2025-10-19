@@ -59,7 +59,7 @@ void PID_Init(PID_t *pid)
  *
  * @return None
  */
-void PID_Control(PID_t *pid, int16_t PID_motor_spd_input, int16_t PID_motor_spd_input_z1)
+void PID_Control(PID_t *pid, int16_t PID_motor_spd_input)
 {
 	int16_t error = 0;
 	int16_t error_z1 = 0;

@@ -59,19 +59,17 @@ void SDLog_Startup(void)
  * - `f_sync()` is called every 30 writes to flush the buffer to the SD card.
  * - Ensure `RW_Buffer` is large enough to hold a single formatted line.
  */
-uint8_t SDLog_Write(Motor_t *motor, PID_t *pid, Rocker_IMU_t *rocker, int decel_sts, float delta_us)
+
+
+void SDLog_Write(Motor_t *motor,  PID_t *pid, Diag_lst_t *diag_lst, Rocker_IMU_t *rocker, int decel_sts, float delta_us)
 {
 	static int f_sync_count = 0;
-	uint8_t f_sync_sts;
-
 	f_sync_count++;
-	snprintf(RW_Buffer, sizeof(RW_Buffer), "%8u %8ld %8d %8d %8d %8u %8u %8d\n",(uint16_t) delta_us, motor->Motor_pos, motor->Motor_spd, pid->Tgt_spd, rocker->Omega_Y , pid->PWM_Output, decel_sts, rocker->Acc_X);
+	snprintf(RW_Buffer, sizeof(RW_Buffer), "%8u %8ld %8d %8d %8d %8u %8u %8d %8d\n",(uint16_t) delta_us, (motor->Motor_pos), motor->Motor_spd, pid->Tgt_spd, rocker->Omega_Y , pid->PWM_Output, decel_sts, 0, rocker->Acc_X);
 	f_write(&Fil, RW_Buffer, strlen(RW_Buffer), &WWC);
 	if (f_sync_count == 30)
 	{
-		f_sync_sts = f_sync(&Fil);
+		diag_lst->MicroSD_state = f_sync(&Fil);
 	    f_sync_count = 0;
 	}
-
-	return f_sync_sts;
 }
