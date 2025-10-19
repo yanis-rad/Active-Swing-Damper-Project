@@ -52,7 +52,7 @@ The connection statuses of both the IMU and the MicroSD reader are monitored. Th
 ## Control Logic
 The goal of the control system is to produce a torque in response to the oscillations of the rocker. To do this a speed control loop is implemented using a **PID controller**. The PID logic is active only during the acceleration phase and follows the target speed that is assigned as follows:
 - During **acceleration**, the target speed is proportional to the angular velocity of the rocker.
-- During **deceleration**, the target speed is reset to zero.
+- During **deceleration**, the target speed is reset to zero. 
 Given the fast dynamics of the system, ASD implements the PID speed controller only with the **P and D terms** the coefficients of which have been tuned appropriately to give a fast and fluid response.
 
 
