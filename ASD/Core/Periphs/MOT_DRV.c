@@ -60,17 +60,17 @@ void Motor_Drive_Speed_Set(uint16_t pwm_command, int pin_in3_state,  int pin_in4
  */
 void Motor_Drive_PinState_Set(int16_t tgt_spd, int decel_sts, int *pin_in3_state, int *pin_in4_state)
 {
-	if ((abs(tgt_spd) < 300) || decel_sts) //Inactivity speed band
+	if ((abs(tgt_spd) < 60) || decel_sts) //Inactivity speed band for values lower than 60 RPM
 	{
 		*pin_in3_state = 1;
 		*pin_in4_state = 1;
 	}
-	else if (tgt_spd >= 300)
+	else if (tgt_spd >= 60)
 	{
 		*pin_in3_state = 1;
 		*pin_in4_state = 0;
     }
-	else if (tgt_spd <= -300)
+	else if (tgt_spd <= -60)  
 	{
 		*pin_in3_state = 0;
 		*pin_in4_state = 1;
