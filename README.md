@@ -45,7 +45,8 @@ The three states are:
 3. **Fault State:** accessed if either the MicroSD reader is reporting problems or the IMU is not exchanging data correctly. 
    In this state the logic deactivates the motor for safety reasons. 
 
-<img width="815" height="503" alt="Screenshot 2025-10-17 093359" src="https://github.com/user-attachments/assets/39c6467f-ac91-47f8-98a2-d7457c7ca51f" />
+<img width="815" height="477" alt="image" src="https://github.com/user-attachments/assets/ddfea06a-b00f-430b-82ba-397fb97e6942" />
+
 
 ---
 ## Diagnostics
