@@ -80,4 +80,9 @@ Multiple test were performed to asses the performance of ASD. The main test used
 
 <img width="815" height="430" alt="image" src="https://github.com/user-attachments/assets/0d0a4546-e025-44c5-87e4-fe311e6d37ba" />
 
+## Next Steps
+- Improve prototype for better symmetry during rotation
+- Improve braking logic for more fluid braking
+- Rewrite sw in C++
+
 
