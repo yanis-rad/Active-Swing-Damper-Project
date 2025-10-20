@@ -78,5 +78,6 @@ Multiple test were performed to asses the performance of ASD. The main test used
 - Reduced oscillation frequency by 9% on average.
 - Less overall oscillations before reaching stable position.
 
-  <img width="815" height="487" alt="Screenshot 2025-10-12 210849" src="https://github.com/user-attachments/assets/10b12386-d526-42e3-b766-7c5dea72b39e" />
+<img width="815" height="430" alt="image" src="https://github.com/user-attachments/assets/0d0a4546-e025-44c5-87e4-fe311e6d37ba" />
+
 
