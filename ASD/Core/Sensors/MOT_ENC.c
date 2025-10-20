@@ -91,7 +91,7 @@ void Motor_Speed_Calc(Motor_t *motor,  float *delta_us,  float *delta_s)
 
 	if (*delta_us > 1.0f)
 	{
-	    motor->Motor_spd_raw = (delta_pos *60 * 1e6f) / *delta_us; // RPM
+	    motor->Motor_spd_raw = (delta_rev *60 * 1e6f) / *delta_us; // RPM
 	}
 	else
 	{
