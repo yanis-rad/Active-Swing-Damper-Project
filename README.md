@@ -16,7 +16,7 @@ The system uses a PID controller to command a DC motor based on feedback from an
 
 First prototype image:
 
-<img width="675" height="500" alt="image" src="https://github.com/user-attachments/assets/72faa524-e769-49ac-a1d4-7f0d7d16e54a" />
+<img width="815" height="604" alt="image" src="https://github.com/user-attachments/assets/72faa524-e769-49ac-a1d4-7f0d7d16e54a" />
 
 
 
@@ -39,7 +39,7 @@ The three states are:
 3. **Fault State:** accessed if either the MicroSD reader is reporting problems or the IMU is not exchanging data correctly. 
    In this state the logic deactivates the motor for safety reasons. 
 
-<img width="520" height="321" alt="Screenshot 2025-10-17 093359" src="https://github.com/user-attachments/assets/39c6467f-ac91-47f8-98a2-d7457c7ca51f" />
+<img width="815" height="503" alt="Screenshot 2025-10-17 093359" src="https://github.com/user-attachments/assets/39c6467f-ac91-47f8-98a2-d7457c7ca51f" />
 
 ---
 ## Diagnostics
@@ -56,7 +56,8 @@ The goal of the control system is to produce a torque in response to the oscilla
 Given the fast dynamics of the system, ASD implements the PID speed controller only with the **P and D terms** the coefficients of which have been tuned appropriately to give a fast and fluid response.
 
 
-<img width="682" height="453" alt="image" src="https://github.com/user-attachments/assets/35cb1a34-933e-4441-97bc-707735823a41" />
+<img width="815" height="557" alt="image" src="https://github.com/user-attachments/assets/5e34f598-8931-40b5-9843-9dbdecbde1e4" />
+
 
 
 ---
