@@ -23,6 +23,7 @@ The following graph shows the overall behaviour of ASD based on the data coming 
 - 2 × 4.2V Batteries
 
 First prototype image:
+
 <img width="815" height="670" alt="image" src="https://github.com/user-attachments/assets/926a9a43-182c-4a17-9c55-503059662ef5" />
 
 ---
