@@ -31,7 +31,7 @@
  */
 void PID_Init(PID_t *pid)
 {
-	pid->Kp = 20;
+	pid->Kp = 100;
     pid->Ki = 0;
     pid->Kd = 0.1;
     pid->PWM_min = 0;
