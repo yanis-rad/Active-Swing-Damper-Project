@@ -2,7 +2,15 @@
 
 This repository contains the source code for the **Active Swing Damper (ASD)**, a control system designed to actively reduce oscillations 
 in a rocker subjected to external forces. 
-The system uses a PID controller to command a DC motor based on feedback from an IMU and the motor encoder.
+
+## Overall view
+The system uses a PID controller to command a DC motor based on feedback from an IMU and the motor encoder. More specifically, the angular velocity 
+of the rocker is recorded and a proportional target speed is computed. The PID follows the target speed during the acceleration phase when the angular velocity keeps increasing.
+Once the angular velocity reaches its maximum and begins to decrease, the motor enters the deceleration phase. During this phase, braking is applied to stop the flywheel before initiating rotation in the opposite direction.
+
+The following graph shows the overall behaviour of ASD based on the data coming from the IMU:
+<img width="815" height="564" alt="image" src="https://github.com/user-attachments/assets/38724eeb-c7a5-44a4-9d46-8a1b36f6aa16" />
+
 ---
 ## Hardware Components
 
@@ -15,11 +23,7 @@ The system uses a PID controller to command a DC motor based on feedback from an
 - 2 × 4.2V Batteries
 
 First prototype image:
-
-<img width="815" height="324" alt="image" src="https://github.com/user-attachments/assets/a3526372-12e9-405c-895c-19a5a810ba06" />
-
-
-
+<img width="815" height="670" alt="image" src="https://github.com/user-attachments/assets/926a9a43-182c-4a17-9c55-503059662ef5" />
 
 ---
 ## Data Collection
