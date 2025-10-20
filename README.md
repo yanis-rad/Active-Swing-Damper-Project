@@ -16,7 +16,8 @@ The system uses a PID controller to command a DC motor based on feedback from an
 
 First prototype image:
 
-<img width="815" height="604" alt="image" src="https://github.com/user-attachments/assets/72faa524-e769-49ac-a1d4-7f0d7d16e54a" />
+<img width="815" height="324" alt="image" src="https://github.com/user-attachments/assets/a3526372-12e9-405c-895c-19a5a810ba06" />
+
 
 
 
