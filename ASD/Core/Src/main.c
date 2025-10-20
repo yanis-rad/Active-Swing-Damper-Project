@@ -40,7 +40,7 @@ int PIN_IN4_STATE;
 /****************************************************
  *                 Constants / Macros              *
  ****************************************************/
-#define SCALE_FACTOR 0.15
+#define SCALE_FACTOR 0.02 //best scaling for the accelerating/braking capabilities of the motor with flywheel
 #define CLKWISE ((PIN_IN3_STATE==1) && (PIN_IN4_STATE == 0))
 #define ACLKWISE ((PIN_IN3_STATE==0) && (PIN_IN4_STATE == 1))
 
